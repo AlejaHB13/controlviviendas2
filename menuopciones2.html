@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Idioma- Language</title>
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<script>
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'en-US';
+
+  recognition.onresult = (event) => {
+    const command = event.results[0][0].transcript.toLowerCase();
+
+    if (command === 'flat') {
+      const inicioLink = document.getElementById('flat').querySelector('a');
+      window.location.href = inicioLink.href;
+    } else if (command === 'profile') {
+      const inicioLink = document.getElementById('perfil-del-usuario').querySelector('a');
+      window.location.href = inicioLink.href;
+    } else if (command === 'objects') {
+      const inicioLink = document.getElementById('objetos-casa').querySelector('a');
+      window.location.href = inicioLink.href;
+    }
+  };
+
+  recognition.onerror = (event) => {
+    console.error(event.error);
+  };
+
+  function startRecognition() {
+    recognition.continuous = true;
+    recognition.start();
+  }
+</script>
+
+<body style="background-color:#a8d1ec">
+
+  <div class="container4">
+    <div class="content">
+      <h3>If you want to select the menu by voice, please click on the button:</h3>
+      <img id="imagen-boton" src="imagenes\1-removebg-preview.png" alt="Plano en español">
+      <button id="boton-activar" onclick="startRecognition()">Activate voice</button>
+    </div>
+  </div>
+
+  <div class="container3">
+    <div class="content">
+      <h1>Select the option you want:</h1>
+      <nav>
+        <ul>
+          <li id="flat">
+            <a id="flat" class="boton" href="ingles.html">English flat</a>
+          </li>
+          <h1></h1>
+          <th>If you enable the voice option say 'FLAT'</th>
+          <h1></h1>
+          <li id="profile">
+            <a id="perfil-del-usuario" class="boton" href="perfilIngles.html">User profile</a>
+          </li>
+          <h1></h1>
+          <th>If you enable the voice option say 'PROFILE'</th>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+</body>
+
+</html>

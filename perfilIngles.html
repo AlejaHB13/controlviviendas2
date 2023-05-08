@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="css/perfilingles.css" rel="stylesheet">
+    <title>Configuration</title>
+</head>
+
+    <body>
+      <script>
+        const recognition = new webkitSpeechRecognition();
+        recognition.lang = 'en-US';
+      
+        recognition.onresult = (event) => {
+          const command = event.results[0][0].transcript.toLowerCase();
+      
+          if (command === 'save') {
+            const inicioLink = document.getElementById('save').querySelector('a');
+            window.location.href = inicioLink.href;
+          }
+        };
+      
+        recognition.onerror = (event) => {
+          console.error(event.error);
+        };
+      
+        function startRecognition() {
+          recognition.continuous = true;
+          recognition.start();
+        }
+      </script>
+
+      <div class="container4"> 
+        <div class="content">
+        <h3>If you want to select the menu by voice, please click on the button:</h3>
+        <img id="imagen-boton" src="imagenes\1-removebg-preview.png" alt="Plano en ingles">
+        <button id="boton-activar" onclick="startRecognition()">Activate voice</button>
+      </div>
+    </div>
+
+      <div class="centrado">
+        <div class="container">
+          <form>
+            <h2>Smart home profile</h2>
+            <label class="form-label">Username:</label>
+            <input type="text" class="form-control">
+            <h1></h1>
+            <label class="form-label">House objects:</label>
+            <h1></h1>
+            <div class="columna-izquierda">
+              <p>Light</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <p>Windows</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <p>Doors</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <p>Televisions</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="columna-derecha">
+              <p>Heating</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <p>Garden roses</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+              <p>Vacuum cleaner</p>
+              <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+              </label>
+            </div>
+            <h1></h1>
+           <button id="save" type="submit" class="btn btn-success btn" >Save</button>
+          </form>
+        </div>
+        </div>
+    </body>
+    
+    </html>

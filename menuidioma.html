@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Idioma- Language</title>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<script>
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'es-ES';
+
+  recognition.onresult = (event) => {
+    const command = event.results[0][0].transcript.toLowerCase();
+
+    if (command === 'español') {
+      const inicioLink = document.getElementById('español').querySelector('a');
+      window.location.href = inicioLink.href;
+    } else if (command === 'english') {
+      const inicioLink = document.getElementById('english').querySelector('a');
+      window.location.href = inicioLink.href;
+    }
+  };
+
+  recognition.onerror = (event) => {
+    console.error(event.error);
+  };
+
+  function startRecognition() {
+    recognition.continuous = true;
+    recognition.start();
+  }
+</script>
+
+<body style="background-color:#a8d1ec">
+  <div class="container">
+    <h3>Si desea seleccionar el menú por voz por favor dar clic en el boton:</h3>
+    <img id="imagen-boton" src="imagenes\1-removebg-preview.png" alt="Plano en español">
+    <button id="boton-activar" onclick="startRecognition()">Activar voz</button>
+
+    <h3>If you want to select the menu by voice, please click on the button:</h3>
+    <img id="imagen-boton" src="imagenes\1-removebg-preview.png" alt="Plano en ingles">
+    <button id="boton-activar" onclick="startRecognition()">Activate voice</button>
+  </div>
+
+  <div class="container2">
+    <h1>Bienvenido - Welcome</h1>
+    <th>Seleccione el idioma que desea - Select the language you want</th>
+    <nav>
+      <ul>
+        <li id="español">
+          <a id="español" class="boton" href="menuopciones.html">Español</a>
+        </li>
+        <h1></h1>
+        <li id="english">
+          <a id="enlace-ingles" class="boton" href="menuopciones2.html">English</a>
+        </li>
+      </ul>
+      <img id="plano" src="imagenes/imagen1.png" alt="Plano en español">
+    </nav>
+  </div>
+  
+</body>
+
+</html>

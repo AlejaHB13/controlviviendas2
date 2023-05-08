@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Menú</title>
+  <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<script>
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = 'es-ES';
+
+  recognition.onresult = (event) => {
+    const command = event.results[0][0].transcript.toLowerCase();
+
+    if (command === 'plano') {
+      const inicioLink = document.getElementById('plano').querySelector('a');
+      window.location.href = inicioLink.href;
+    } else if (command === 'perfil') {
+      const inicioLink = document.getElementById('perfil').querySelector('a');
+      window.location.href = inicioLink.href;
+    }
+  };
+
+  recognition.onerror = (event) => {
+    console.error(event.error);
+  };
+
+  function startRecognition() {
+    recognition.continuous = true;
+    recognition.start();
+  }
+</script>
+
+<body style="background-color:#a8d1ec">
+
+  <div class="container4">
+    <div class="content">
+      <h3>Si desea seleccionar el menú por voz por favor dar clic en el boton:</h3>
+      <img id="imagen-boton" src="imagenes\1-removebg-preview.png" alt="Plano en español">
+      <button id="boton-activar" onclick="startRecognition()">Activar voz</button>
+    </div>
+  </div>
+
+  <div class="container3">
+    <div class="content">
+
+      <h1>Seleccione la opción que desea:</h1>
+      <nav>
+        <ul>
+          <li id="plano">
+            <a id="plano" class="boton" href="español.html">Plano de la casa</a>
+          </li>
+          <h1></h1>
+          <th>Si habilita la opción de voz diga 'PLANO'</th>
+          <h1></h1>
+          <li id="perfil">
+            <a id="perfil" class="boton" href="perfil.html">Perfil del usuario</a>
+          </li>
+          <h1></h1>
+          <th>Si habilita la opción de voz diga 'PERFIL'</th>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</body>
+
+</html>

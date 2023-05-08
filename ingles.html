@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/stylesenglish.css">
+  <title>English flat </title>
+</head>
+<script>
+
+  var recognition = new webkitSpeechRecognition();
+  recognition.lang = 'en-US'; // Idioma de reconocimiento de voz
+  recognition.continuous = false;
+  recognition.interimResults = false;
+
+  function mostrarAlerta() {
+    var alerta = document.querySelector('.alerta');
+    alerta.classList.add('mostrando');
+    setTimeout(function () {
+      alerta.classList.remove('mostrando');
+    }, 60000); // 60000 milisegundos = 1 minuto
+  }
+
+  recognition.onresult = function (event) {
+    var transcript = event.results[0][0].transcript.toLowerCase();
+    if (transcript.indexOf("colors") !== -1) {
+      mostrarAlerta();
+    }
+  };
+
+  recognition.onerror = function (event) {
+    console.log('Error de reconocimiento de voz: ', event.error);
+  };
+
+  function startRecognition() {
+    recognition.continuous = true;
+    recognition.start();
+  }
+
+</script>
+
+
+<body>
+
+  <div id="colores" class="btn" onclick="mostrarAlerta()">Object colors</div>
+  <div class="alerta"> 
+    <ol class="sin-numero">
+      <li>Light ->  off <span class="cuadrito"></span> on <span class="cuadrito2"></span></li>
+      <li>Windows ->  open <span class="cuadrito3"></span> closed <span class="cuadrito4"></span></li>
+      <li>Doors -> open <span class="cuadrito5"></span> closed <span class="cuadrito3"></span></li>
+      <li>Tv -> off <span class="cuadrito6"></span> on <span class="cuadrito5"></span></li>
+      <li>Heating -> off <span class="cuadrito3"></span> on <span class="cuadrito5"></span> </li>  
+    <li>This message to be closed automatically in 1 minute.</li>   
+  </ol>
+</div>
+  <div class="botonactivar" onclick="startRecognition()"> Active voice </div>
+  <div class="centrado">
+    <div class="alert alert-primary " role="alert">
+      <img src="imagenes\imginfo.png" width="90" height="50">
+      <strong>Recommendation!</strong>
+      The user is advised to have the web page zoomed in at 75%, in order to correctly view the plan.
+    </div>
+    <h1></h1>
+    <h1></h1>
+    <h1>Smart home flat</h1>
+    <img id="plano2" src="imagenes/planoingles.png" alt="Plano en ingles">
+    <!--Objects main room-->
+    <div class="mainroomdoor" id="main-room-door"></div>
+    <div class="mainroomwindow" id="main-room-window"></div>
+    <div class="mainroomlightbulb" id="main-room-lightbulb"></div>
+    <div class="mainroomheating " id="main-room-heating"></div>
+    <div class="mainroomtv" id="main-room-tv"></div>"
+    <!--Objects  room 2-->
+    <div class="roomdoor2" id="room-door2"></div>
+    <div class="windowroom2" id="window-room2"></div>
+    <div class="lightbulbroom2" id="light-room2"></div>
+    <div class="heatingroom2 " id="healting-room2"></div>
+    <div class="tvroom2" id="tv-room2"></div>
+    <!--Objects room 3-->
+    <div class="roomdoor3" id="room-door3"></div>
+    <div class="windowroom3" id="window-room3"></div>
+    <div class="lightbulbroom3" id="light-room3"></div>
+    <div class="heatingroom3" id="healting-room3"></div>
+    <!--Main bathroom objects-->
+    <div class="mainbathroomdoor" id="main-bath-door"></div>
+    <div class="mainbathwindow" id="main-bath-window"></div>
+    <div class="mainbathlight" id="main-bath-light"></div>
+    <!--Bathroom objects 2-->
+    <div class="roombathdoor2" id="bath-door2"></div>
+    <div class="windowbathroom2" id="bath-window2"></div>
+    <div class="bathroomlight2" id="bath-light2"></div>
+    <!--washing area objects-->
+    <div class="washingareadoor" id="washing-area-door"></div>
+    <div class="windowwashingarea" id="window-washing-area"></div>
+    <div class="washlight" id="wash-light"></div>
+    <!--kitchen objects-->
+    <div class="kitchenwindow" id="kitchen-window"></div>
+    <div class="kitchenlight" id="kitchen-light"></div>
+    <!--cupboard objects-->
+    <div class="cupboardoor" id="washing-area-door"></div>
+    <div class="cupboardlight" id="wash-light"></div>
+    <!--hall objects-->
+    <div class="mainentrance" id="main-entrance"></div>
+    <div class="livingroomwindow" id="living-room-window"></div>
+    <div class="roomlight" id="room-light"></div>
+    <div class="roomheating " id="room-heating"></div>
+    <!--parking objects-->
+    <div class="parkingentrance" id="parking-entrance"></div>
+    <div class="parkinglight" id="parking-light"></div>
+    <div class="roomentranceparkingdoor" id="room-entrance-parking-door"></div>
+    <!--objects Sprayer-->
+    <div class="Sprayer1" id="Sprayer-1"></div>
+    <div class="Sprayer2" id="Sprayer-2"></div>
+
+
+</body>
+
+</html>

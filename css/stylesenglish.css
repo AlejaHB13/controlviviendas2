@@ -1,0 +1,475 @@
+.cuadrito {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.cuadrito2 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: yellow;
+  border-radius: 3px;
+}
+
+.cuadrito3 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: blue;
+  border-radius: 3px;
+}
+
+.cuadrito4 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: red;
+  border-radius: 3px;
+}
+
+.cuadrito5 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: green;
+  border-radius: 3px;
+}
+
+.cuadrito6 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color:  rgb(231, 141, 37);
+  border-radius: 3px;
+}
+
+.botonactivar {
+  position: absolute;
+  top: 110px;
+  right: 70px;
+  display: inline-block;
+  background-color: #d19af1;
+  color: rgb(3, 3, 3);
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn {
+  position: absolute;
+  top: 110px;
+  left: 30px;
+  display: inline-block;
+  background-color: #d19af1;
+  color: rgb(3, 3, 3);
+  text-align: center;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.alerta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(240, 199, 250);
+  color: black;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  display: none;
+  z-index: 9999;
+}
+
+.alerta.mostrando {
+  display: block;
+}
+
+.sin-numero {
+  list-style-type: none;
+}  
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+  font-family: Georgia, sans-serif;
+}
+
+.mainroomdoor {
+  position: absolute;
+  top: 778px;
+  left: 737px;
+  width: 5px;
+  height: 70px;
+  background-color: green;
+}
+
+.mainroomwindow {
+  position: absolute;
+  top: 461px;
+  left: 289px;
+  width: 83px;
+  height: 7px;
+  background-color: blue;
+}
+
+.mainroomlightbulb {
+  position: absolute;
+  top: 507px;
+  left: 306px;
+  width: 16px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.mainroomheating {
+  position: absolute;
+  top: 694px;
+  left: 328px;
+  width: 8px;
+  height: 15px;
+  background-color: red;
+}
+
+.mainroomtv {
+  position: absolute;
+  top: 799px;
+  left: 407px;
+  width: 76px;
+  height: 7px;
+  background-color: rgb(231, 141, 37);
+}
+
+/*Objects main room 2*/
+.roomdoor2 {
+  position: absolute;
+  top: 774px;
+  left: 923px;
+  width: 66px;
+  height: 8px;
+  background-color: green;
+}
+
+.windowroom2 {
+  position: absolute;
+  top: 462px;
+  left: 833px;
+  width: 72px;
+  height: 7px;
+  background-color: blue;
+}
+
+.lightbulbroom2 {
+  position: absolute;
+  top: 501px;
+  left: 844px;
+  width: 16px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.heatingroom2 {
+  position: absolute;
+  top: 651px;
+  left: 941px;
+  width: 19px;
+  height: 10px;
+  background-color: rgb(226, 72, 72);
+}
+
+.tvroom2 {
+  position: absolute;
+  top: 728px;
+  left: 706px;
+  width: 54px;
+  height: 5px;
+  background-color: rgb(231, 141, 37);
+}
+
+/*Objects main room 3*/
+.roomdoor3 {
+  position: absolute;
+  top: 780px;
+  left: 1191px;
+  width: 5px;
+  height: 68px;
+  background-color: green;
+}
+
+.windowroom3 {
+  position: absolute;
+  top: 645px;
+  left: 1496px;
+  width: 8px;
+  height: 73px;
+  background-color: blue;
+}
+
+.lightbulbroom3 {
+  position: absolute;
+  top: 503px;
+  left: 1229px;
+  width: 27px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.heatingroom3 {
+  position: absolute;
+  top: 655px;
+  left: 1212px;
+  width: 19px;
+  height: 9px;
+  background-color: rgb(226, 72, 72);
+}
+
+/*Main bathroom objects*/
+.mainbathroomdoor {
+  position: absolute;
+  top: 850px;
+  left: 264px;
+  width: 85px;
+  height: 6px;
+  background-color: green;
+}
+
+.mainbathwindow {
+  position: absolute;
+  top: 918px;
+  left: 255px;
+  width: 6px;
+  height: 48px;
+  background-color: blue;
+}
+
+.mainbathlight {
+  position: absolute;
+  top: 948px;
+  left: 416px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+
+/*Bathroom objects 2*/
+.roombathdoor2 {
+  position: absolute;
+  top: 772px;
+  left: 1000px;
+  width: 62px;
+  height: 9px;
+  background-color: green;
+}
+
+.windowbathroom2 {
+  position: absolute;
+  top: 461px;
+  left: 1040px;
+  width: 75px;
+  height: 8px;
+  background-color: blue;
+}
+
+.bathroomlight2 {
+  position: absolute;
+  top: 628px;
+  left: 1010px;
+  width: 12px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+/*washing area objects*/
+.washingareadoor {
+  position: absolute;
+  top: 1027px;
+  left: 372px;
+  width: 6px;
+  height: 65px;
+  background-color: green;
+}
+
+.windowwashingarea {
+  position: absolute;
+  top: 1295px;
+  left: 277px;
+  width: 75px;
+  height: 6px;
+  background-color: blue;
+}
+
+.washlight {
+  position: absolute;
+  top: 1037px;
+  left: 292px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+/*kitchen objects*/
+
+.kitchenwindow {
+  position: absolute;
+  top: 1297px;
+  left: 600px;
+  width: 75px;
+  height: 6px;
+  background-color: blue;
+}
+
+.kitchenlight {
+  position: absolute;
+  top: 1058px;
+  left: 571px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+/*cupboard objects*/
+
+.cupboardoor {
+  position: absolute;
+  top: 1220px;
+  left: 691px;
+  width: 7px;
+  height: 56px;
+  background-color: green;
+}
+
+.cupboardlight {
+  position: absolute;
+  top: 1210px;
+  left: 807px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+/*hall objects*/
+.mainentrance {
+  position: absolute;
+  top: 870px;
+  left: 1246px;
+  width: 10px;
+  height: 75px;
+  background-color: green;
+}
+.livingroomwindow {
+  position: absolute;
+  top: 1062px;
+  left: 1245px;
+  width: 8px;
+  height: 93px;
+  background-color: blue;
+}
+
+.roomlight {
+  position: absolute;
+  top: 876px;
+  left: 1082px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.roomheating {
+  position: absolute;
+  top: 886px;
+  left: 792px;
+  width: 10px;
+  height: 24px;
+  background-color: rgb(226, 72, 72);
+}
+
+/*parking objects*/
+.parkingentrance {
+  position: absolute;
+  top: 1458px;
+  left: 905px;
+  width: 94px;
+  height: 12px;
+  background-color: green;
+}
+
+.roomentranceparkingdoor {
+  position: absolute;
+  top: 1298px;
+  left: 915px;
+  width: 56px;
+  height: 13px;
+  background-color: green;
+}
+
+.parkinglight {
+  position: absolute;
+  top: 1350px;
+  left: 978px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+/*objects Sprayer*/
+.Sprayer1 {
+  position: absolute;
+  top: 1436px;
+  left: 1456px;
+  width: 87px;
+  height: 9px;
+  background-color: rgb(209, 179, 10);
+}
+
+.Sprayer2 {
+  position: absolute;
+  top: 1565px;
+  left: 304px;
+  width: 87px;
+  height: 9px;
+  background-color: rgb(209, 179, 10);
+}
+.cambiodecolor{
+  background-color: red;
+}
+.cambiodecolorventanacalefaccion {
+  background-color: green;
+}
+.cambiodecolortv {
+  background-color: green;
+}
+.cambiodecolorbombillo{
+  background-color: yellow;
+}
+

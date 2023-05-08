@@ -1,0 +1,481 @@
+.cuadrito {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: grey;
+    border-radius: 3px;
+}
+
+.cuadrito2 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: yellow;
+    border-radius: 3px;
+}
+
+.cuadrito3 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: blue;
+    border-radius: 3px;
+}
+
+.cuadrito4 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: red;
+    border-radius: 3px;
+}
+
+.cuadrito5 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: green;
+    border-radius: 3px;
+}
+
+.cuadrito6 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: rgb(231, 141, 37);
+    border-radius: 3px;
+}
+
+.botonactivar {
+    position: absolute;
+    top: 110px;
+    right: 70px;
+    display: inline-block;
+    background-color: #d19af1;
+    color: rgb(3, 3, 3);
+    text-align: center;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn {
+    position: absolute;
+    top: 110px;
+    left: 30px;
+    display: inline-block;
+    background-color: #d19af1;
+    color: rgb(3, 3, 3);
+    text-align: center;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.alerta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(240, 199, 250);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 9999;
+}
+
+.alerta.mostrando {
+    display: block;
+}
+
+.sin-numero {
+    list-style-type: none;
+}
+
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    font-family: Georgia, sans-serif;
+}
+
+/*Objetos habitacion principal*/
+.puertahabprincipal {
+    position: absolute;
+    top: 785px;
+    left: 733px;
+    width: 5px;
+    height: 68px;
+    background-color: green;
+}
+
+.ventanahabprincipal {
+    position: absolute;
+    top: 466px;
+    left: 285px;
+    width: 83px;
+    height: 7px;
+    background-color: blue;
+}
+
+.bombillohabprincipal {
+    position: absolute;
+    top: 512px;
+    left: 304px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.calefacionhabprincipal {
+    position: absolute;
+    top: 697px;
+    left: 325px;
+    width: 8px;
+    height: 16px;
+    background-color: rgb(226, 72, 72);
+}
+
+.tvhabprincipal {
+    position: absolute;
+    top: 800px;
+    left: 390px;
+    width: 100px;
+    height: 7px;
+    background-color: rgb(231, 141, 37);
+}
+
+/*Objetos habitacion principal 2*/
+.puertahabprincipal2 {
+    position: absolute;
+    top: 783px;
+    left: 923px;
+    width: 61px;
+    height: 8px;
+    background-color: green;
+}
+
+.ventanahabprincipal2 {
+    position: absolute;
+    top: 466px;
+    left: 830px;
+    width: 68px;
+    height: 7px;
+    background-color: blue;
+}
+
+.bombillohabprincipal2 {
+    position: absolute;
+    top: 506px;
+    left: 841px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.calefacionhabprincipal2 {
+    position: absolute;
+    top: 655px;
+    left: 941px;
+    width: 15px;
+    height: 10px;
+    background-color: rgb(226, 72, 72);
+}
+
+.tvhabprincipal2 {
+    position: absolute;
+    top: 733px;
+    left: 688px;
+    width: 79px;
+    height: 7px;
+    background-color: rgb(231, 141, 37);
+}
+
+/*Objetos habitacion 3*/
+.puertahab3 {
+    position: absolute;
+    top: 785px;
+    left: 1156px;
+    width: 5px;
+    height: 68px;
+    background-color: green;
+}
+
+.ventanahab3 {
+    position: absolute;
+    top: 653px;
+    left: 1496px;
+    width: 8px;
+    height: 73px;
+    background-color: blue;
+}
+
+.bombillohab3 {
+    position: absolute;
+    top: 508px;
+    left: 1226px;
+    width: 27px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.calefacionhab3 {
+    position: absolute;
+    top: 661px;
+    left: 1212px;
+    width: 19px;
+    height: 9px;
+    background-color: rgb(226, 72, 72);
+}
+
+/*Objetos baño principal*/
+.puertabañoprincipal {
+    position: absolute;
+    top: 850px;
+    left: 264px;
+    width: 85px;
+    height: 6px;
+    background-color: green;
+}
+
+.ventanabañoprincipal {
+    position: absolute;
+    top: 924px;
+    left: 255px;
+    width: 6px;
+    height: 48px;
+    background-color: blue;
+}
+
+.bombillobañoprincipal {
+    position: absolute;
+    top: 955px;
+    left: 413px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos baño2*/
+.puertabaño2 {
+    position: absolute;
+    top: 777px;
+    left: 1002px;
+    width: 57px;
+    height: 8px;
+    background-color: green;
+}
+
+.ventanabaño2 {
+    position: absolute;
+    top: 466px;
+    left: 1040px;
+    width: 75px;
+    height: 8px;
+    background-color: blue;
+}
+
+.bombillobaño2 {
+    position: absolute;
+    top: 634px;
+    left: 1006px;
+    width: 12px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos zonalavado*/
+.puertazonalavado {
+    position: absolute;
+    top: 1033px;
+    left: 368px;
+    width: 6px;
+    height: 65px;
+    background-color: green;
+}
+
+.ventanazonalavado {
+    position: absolute;
+    top: 1300px;
+    left: 275px;
+    width: 75px;
+    height: 6px;
+    background-color: blue;
+}
+
+.bombillozonalavado {
+    position: absolute;
+    top: 1040px;
+    left: 288px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos cocina */
+
+.ventanacocina {
+    position: absolute;
+    top: 1300px;
+    left: 600px;
+    width: 75px;
+    height: 6px;
+    background-color: blue;
+}
+
+.bombillococina {
+    position: absolute;
+    top: 1063px;
+    left: 568px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos alacena */
+
+.puertaalacena {
+    position: absolute;
+    top: 1222px;
+    left: 688px;
+    width: 7px;
+    height: 65px;
+    background-color: green;
+}
+
+.bombilloalacena {
+    position: absolute;
+    top: 1215px;
+    left: 804px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos sala*/
+.puertasala {
+    position: absolute;
+    top: 878px;
+    left: 1240px;
+    width: 12px;
+    height: 75px;
+    background-color: green;
+}
+
+.ventanasala {
+    position: absolute;
+    top: 1072px;
+    left: 1243px;
+    width: 8px;
+    height: 93px;
+    background-color: blue;
+}
+
+.bombillosala {
+    position: absolute;
+    top: 881px;
+    left: 1080px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.calefacionsala {
+    position: absolute;
+    top: 886px;
+    left: 792px;
+    width: 10px;
+    height: 24px;
+    background-color: rgb(226, 72, 72);
+}
+
+/*Objetos parqueadero*/
+.puertaentradapar {
+    position: absolute;
+    top: 1458px;
+    left: 905px;
+    width: 94px;
+    height: 12px;
+    background-color: green;
+}
+
+.puertaentradasalapar {
+    position: absolute;
+    top: 1298px;
+    left: 915px;
+    width: 56px;
+    height: 13px;
+    background-color: green;
+}
+
+.bombilloparqueadero {
+    position: absolute;
+    top: 1349px;
+    left: 972px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+/*Objetos roseador*/
+.roseador1 {
+    position: absolute;
+    top: 1438px;
+    left: 1454px;
+    width: 87px;
+    height: 9px;
+    background-color: rgb(209, 179, 10);
+}
+
+.roseador2 {
+    position: absolute;
+    top: 1570px;
+    left: 300px;
+    width: 87px;
+    height: 9px;
+    background-color: rgb(209, 179, 10);
+}
+
+.cambiodecolor {
+    background-color: red;
+}
+
+.cambiodecolorventanacalefaccion {
+    background-color: green;
+}
+
+.cambiodecolortv {
+    background-color: green;
+}
+
+.cambiodecolorbombillo {
+    background-color: yellow;
+}
