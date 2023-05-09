@@ -42,7 +42,11 @@ function boundingBox(object) {
 }
 function drawLabel(object) {
   noStroke();
-  fill('white');
+  if (object.label === 'person') {
+    fill('white');
+  } else if (object.label === 'dog') {
+    fill('red');
+  }
   textSize(34);
   text(object.label, object.x + 15, object.y + 34);
 }
@@ -58,11 +62,17 @@ function onDetected(error, results) {
   }
 
   for (let i = 0; i < detections.length; i++) {
-    if (detections[i].label === 'persona') {
-      var mensaje = new SpeechSynthesisUtterance('Persona detectada en la entrada');
-      window.speechSynthesis.speak(mensaje);
-      break;
+    let mensaje = '';
+    if (detections[i].label === 'person') {
+      mensaje = 'Se ha detectado una persona en la entrada';
+    } else if (detections[i].label === 'dog') {
+      mensaje = 'Se ha detectado un perro en la entrada';
     }
+    if (mensaje) {
+      var mensajeVoz = new SpeechSynthesisUtterance(mensaje);
+      window.speechSynthesis.speak(mensajeVoz);
+    }
+    
   }
 }
 
