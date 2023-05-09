@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de registro</title>
+    <link href="css/perfil.css" rel="stylesheet">
+</head>
+<body>
+   
+    <div class="centrado">
+        <div class="container">
+            <div class="centrado2">
+	<h2>Registro usuario</h2>
+    <img src="imagenes\imagen registro.png" class="imagen-pequeña">
+</div>
+	<form method="post" action="#" onsubmit="guardarDatos(event)">
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre" required><br><br>
+		
+		<label for="email">Correo electronico:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		
+		<label for="telefono">Telefono:</label>
+		<input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label class="form-label">Objetos de la casa:</label>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Luz
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Ventanas
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Puertas
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Televisores
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Calefaccion
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Roseadores jardin
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+             Aspiradora
+            </label>
+          </div>  
+		<button type="submit" class="btn">Guardar</button>
+	</form>
+  <h1></h1>
+  <a href="menuopciones.html"><button class="btn">Volver al menu</button></a>
+</div>
+    </div>
+	<script>
+		function guardarDatos(event) {
+			event.preventDefault();
+			let nombre = document.getElementById("nombre").value;
+			let email = document.getElementById("email").value;
+			let telefono = document.getElementById("telefono").value;
+			// Aquí podrías enviar los datos a un servidor para guardarlos en una base de datos
+			
+			// Anunciar en voz alta que el registro fue exitoso
+			let mensaje = new SpeechSynthesisUtterance("Registro exitoso");
+			window.speechSynthesis.speak(mensaje);
+			
+			// Limpiar el formulario
+			document.getElementById("nombre").value = "";
+			document.getElementById("email").value = "";
+			document.getElementById("telefono").value = "";
+		}
+	</script>
+</body>
+</html>

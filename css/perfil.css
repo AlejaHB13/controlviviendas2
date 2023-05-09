@@ -1,47 +1,6 @@
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-}
-
-.switch input {
-  display: none;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: red;
-  border-radius: 20px;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #00a878;
-}
-
-input:checked + .slider:before {
-  transform: translateX(20px);
-}
 
 .centrado {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
@@ -49,72 +8,24 @@ input:checked + .slider:before {
 }
 
 .container {
-  display: flex;
   justify-content: center;
   background-color: #9ee9ab;
-  width: 484px;
-  height: 562px;
+  width: 320px;
+  height: 580px;
   border-radius: 19px;
   padding: 40px;
 }
-  
-  .container p {
-    text-align: left;
-  }
   
   .btn{
     display: block;
     margin: auto;
   }
-  .columna-izquierda {
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-  }
-  
-  .columna-derecha {
-    display: inline-block;
-    width: 45%;
-    vertical-align: top;
-  }
 
-  .container4 {
-    width: 40%; /* Asigna un ancho al contenedor */
-  	height: 400px;
-    background-color: #9ee9ab;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Georgia, sans-serif;
-    float: left;
+  .imagen-pequeña {
+    width: 200px;
+    height: 200px;
+    }
 
-  }
-
-  .content {
-    text-align: center; /* Alinear el contenido en el centro horizontal */
-  }
-
-  #boton-activar {
-    background-color: #4b8b56;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    display: inline-block; /* Coloca el botón en línea con la imagen */
-			vertical-align: middle; /* Alinea verticalmente el botón con la imagen */
-			margin-left: 10px;
-
-  }
-
-  #imagen-boton{
-    width: 20%;
-    height: 30%;
-    display: inline-block; /* Coloca el botón en línea con la imagen */
-    vertical-align: middle; /* Alinea verticalmente el botón con la imagen */
-    margin-left: 10px;
-  }
+    .centrado2{
+      text-align: center;   
+    }
