@@ -47,13 +47,17 @@
   <div id="colores" class="btn" onclick="mostrarAlerta()">Object colors</div>
   <div class="alerta"> 
     <ol class="sin-numero">
-      <li>Light ->  off <span class="cuadrito"></span> on <span class="cuadrito2"></span></li>
-      <li>Windows ->  open <span class="cuadrito3"></span> closed <span class="cuadrito4"></span></li>
-      <li>Doors -> open <span class="cuadrito5"></span> closed <span class="cuadrito3"></span></li>
-      <li>Tv -> off <span class="cuadrito6"></span> on <span class="cuadrito5"></span></li>
-      <li>Heating -> off <span class="cuadrito3"></span> on <span class="cuadrito5"></span> </li>  
-    <li>This message to be closed automatically in 1 minute.</li>   
+      <li>Home objects:</li>
+      <li>Light ->   on <span class="cuadrito2"></span></li>
+      <li>Windows -> closed <span class="cuadrito3"></span></li>
+      <li>Doors -> closed <span class="cuadrito5"></span></li>
+      <li>Tv ->  on <span class="cuadrito6"></span></li>
+      <li>Heating -> on <span class="cuadrito4"></span> </li> 
+      <li>Rosetters -> > on <span class="cuadrito"></span>
+      <li>Vacuum cleaner -> > on <span class="cuadrito7"></span> 
   </ol>
+  <li class="sin-numero">When the objects in the house are closed or turned off, no color will be shown</li>
+  <li class="sin-numero">This message to be closed automatically in 1 minute.</li>
 </div>
   <div class="botonactivar" onclick="startRecognition()"> Active voice </div>
   <div class="centrado">
@@ -106,6 +110,7 @@
     <div class="livingroomwindow" id="living-room-window"></div>
     <div class="roomlight" id="room-light"></div>
     <div class="roomheating " id="room-heating"></div>
+    <div class="aspiradora " id="aspiradora"></div>
     <!--parking objects-->
     <div class="parkingentrance" id="parking-entrance"></div>
     <div class="parkinglight" id="parking-light"></div>

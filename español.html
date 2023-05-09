@@ -10,10 +10,8 @@
     <script src="https://unpkg.com/ml5@0.7.1/dist/ml5.min.js"></script>
     <link rel="stylesheet" href="css/estilosespañol.css">
     <link rel="stylesheet" href="css/styles.css">
-
-
-
 </head>
+
 <script>
 
     var recognition = new webkitSpeechRecognition();
@@ -87,30 +85,29 @@
             }else if (command.includes('apagar televisión habitación 2')) {
                 document.getElementById('tv-hab-principal2').style.backgroundColor = 'orange';
             }
-        }
-        recognition.continuous = true;
+            recognition.continuous = true;
         recognition.start();
+        }   
     }
-
-
-
 </script>
-
 
 <body>
 
     <div id="colores" class="btn" onclick="mostrarAlerta()">colores de objetos</div>
     <div class="alerta">
         <ol class="sin-numero">
-            <li>Luz -> apagado <span class="cuadrito"></span> encendido <span class="cuadrito2"></span></li>
-            <li>Ventanas -> abiertas <span class="cuadrito3"></span> cerradas <span class="cuadrito4"></span></li>
-            <li>Puertas -> abiertas <span class="cuadrito5"></span> cerradas <span class="cuadrito3"></span></li>
-            <li>Televisores -> apagados <span class="cuadrito6"></span> encendidos <span class="cuadrito5"></span></li>
-            <li>Calefacciones -> apagadas <span class="cuadrito3"></span> encendidas <span class="cuadrito5"></span>
-            </li>
-            <li>Este mensaje  se cerrará automáticamente en 1 minuto.</li>
+            <li>Objetos casa:</li>
+            <li>Luz ->  encendido <span class="cuadrito2"></span></li>
+            <li>Ventanas -> cerradas <span class="cuadrito3"></span></li>
+            <li>Puertas ->  cerradas <span class="cuadrito5"></span></li>
+            <li>Televisores ->  encendidos <span class="cuadrito6"></span></li>
+            <li>Calefacciones -> encendidas <span class="cuadrito4"></span>
+            <li>Roseadores -> encendidos <span class="cuadrito"></span>
+            <li>Aspiradora -> encendida <span class="cuadrito7"></span>   
+            </li>    
         </ol>
-
+        <li class="sin-numero">Al estar cerrados o apagados los objetos de la casa no se mostrara ningun color</li>
+        <li class="sin-numero">Este mensaje  se cerrará automáticamente en 1 minuto.</li>
     </div>
     <div class="botonactivar" onclick="startRecognition()"> Activar voz</div>
     <div class="centrado">
@@ -176,6 +173,7 @@
         <div class="ventanasala" id="ventana-sala"></div>
         <div class="bombillosala" id="bombillo-sala"></div>
         <div class="calefacionsala " id="calefacion-sala"></div>
+        <div class="aspiradora " id="aspiradora"></div>
 
         <!--Objetos parqueadero-->
         <div class="puertaentradapar" id="puerta-entrada-parqueadero"></div>

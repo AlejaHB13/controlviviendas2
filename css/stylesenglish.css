@@ -52,6 +52,14 @@
   border-radius: 3px;
 }
 
+.cuadrito7 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  background-color: rgb(204, 1, 223);
+  border-radius: 3px;
+}
 .botonactivar {
   position: absolute;
   top: 110px;
@@ -118,162 +126,166 @@
 
 .mainroomdoor {
   position: absolute;
-  top: 778px;
-  left: 737px;
+  top: 779px;
+  left: 733px;
   width: 5px;
-  height: 70px;
-  background-color: green;
+  height: 68px;
+  border: 2px solid black;
 }
 
 .mainroomwindow {
   position: absolute;
-  top: 461px;
-  left: 289px;
-  width: 83px;
-  height: 7px;
-  background-color: blue;
+    top: 461px;
+    left: 289px;
+    width: 82px;
+    height: 7px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .mainroomlightbulb {
   position: absolute;
-  top: 507px;
-  left: 306px;
-  width: 16px;
+  top: 508px;
+  left: 304px;
+  width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 .mainroomheating {
   position: absolute;
-  top: 694px;
-  left: 328px;
+  top: 692px;
+  left: 325px;
   width: 8px;
-  height: 15px;
-  background-color: red;
+  height: 16px;
+  border: 2px solid black;
 }
 
 .mainroomtv {
   position: absolute;
-  top: 799px;
-  left: 407px;
-  width: 76px;
+  top: 800px;
+  left: 390px;
+  width: 100px;
   height: 7px;
-  background-color: rgb(231, 141, 37);
+  border: 2px solid black;
 }
 
 /*Objects main room 2*/
 .roomdoor2 {
   position: absolute;
-  top: 774px;
-  left: 923px;
-  width: 66px;
+  top: 772px;
+  left: 920px;
+  width: 65px;
   height: 8px;
-  background-color: green;
+  border: 2px solid black;
 }
 
 .windowroom2 {
   position: absolute;
-  top: 462px;
-  left: 833px;
-  width: 72px;
+  top: 461px;
+  left: 832px;
+  width: 75px;
   height: 7px;
-  background-color: blue;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .lightbulbroom2 {
   position: absolute;
   top: 501px;
-  left: 844px;
-  width: 16px;
+  left: 841px;
+  width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 .heatingroom2 {
   position: absolute;
-  top: 651px;
+  top: 650px;
   left: 941px;
-  width: 19px;
+  width: 15px;
   height: 10px;
-  background-color: rgb(226, 72, 72);
+  border: 2px solid black;
 }
 
 .tvroom2 {
   position: absolute;
-  top: 728px;
-  left: 706px;
-  width: 54px;
-  height: 5px;
-  background-color: rgb(231, 141, 37);
+    top: 728px;
+    left: 688px;
+    width: 79px;
+    height: 7px;
+    border: 2px solid black;
 }
 
 /*Objects main room 3*/
 .roomdoor3 {
   position: absolute;
-  top: 780px;
-  left: 1191px;
-  width: 5px;
-  height: 68px;
-  background-color: green;
+    top: 778px;
+    left: 1156px;
+    width: 5px;
+    height: 68px;
+    border: 2px solid black;
 }
 
 .windowroom3 {
   position: absolute;
-  top: 645px;
-  left: 1496px;
+  top: 646px;
+  left: 1497px;
   width: 8px;
-  height: 73px;
-  background-color: blue;
+  height: 75px;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .lightbulbroom3 {
   position: absolute;
-  top: 503px;
-  left: 1229px;
-  width: 27px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: gray;
+    top: 503px;
+    left: 1226px;
+    width: 27px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
 }
 
 .heatingroom3 {
   position: absolute;
-  top: 655px;
+  top: 656px;
   left: 1212px;
   width: 19px;
   height: 9px;
-  background-color: rgb(226, 72, 72);
+  border: 2px solid black;
 }
 
 /*Main bathroom objects*/
 .mainbathroomdoor {
   position: absolute;
-  top: 850px;
+  top: 845px;
   left: 264px;
   width: 85px;
   height: 6px;
-  background-color: green;
+  border: 2px solid black;
 }
 
 .mainbathwindow {
   position: absolute;
-  top: 918px;
-  left: 255px;
-  width: 6px;
+  top: 919px;
+  left: 256px;
+  width: 7px;
   height: 48px;
-  background-color: blue;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .mainbathlight {
   position: absolute;
-  top: 948px;
-  left: 416px;
+  top: 950px;
+  left: 413px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 
@@ -281,175 +293,179 @@
 .roombathdoor2 {
   position: absolute;
   top: 772px;
-  left: 1000px;
-  width: 62px;
-  height: 9px;
-  background-color: green;
+  left: 998px;
+  width: 65px;
+  height: 8px;
+  border: 2px solid black;
 }
 
 .windowbathroom2 {
   position: absolute;
-  top: 461px;
-  left: 1040px;
-  width: 75px;
-  height: 8px;
-  background-color: blue;
+    top: 461px;
+    left: 1040px;
+    width: 75px;
+    height: 7px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bathroomlight2 {
   position: absolute;
-  top: 628px;
-  left: 1010px;
-  width: 12px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: gray;
+    top: 629px;
+    left: 1006px;
+    width: 12px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
 }
 
 /*washing area objects*/
 .washingareadoor {
   position: absolute;
-  top: 1027px;
-  left: 372px;
-  width: 6px;
-  height: 65px;
-  background-color: green;
+    top: 1028px;
+    left: 368px;
+    width: 6px;
+    height: 65px;
+    border: 2px solid black;
 }
 
 .windowwashingarea {
   position: absolute;
   top: 1295px;
-  left: 277px;
+  left: 279px;
   width: 75px;
-  height: 6px;
-  background-color: blue;
+  height: 7px;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .washlight {
   position: absolute;
-  top: 1037px;
-  left: 292px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: gray;
+    top: 1035px;
+    left: 288px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
 }
 
 /*kitchen objects*/
 
 .kitchenwindow {
   position: absolute;
-  top: 1297px;
-  left: 600px;
+  top: 1295px;
+  left: 601px;
   width: 75px;
   height: 6px;
-  background-color: blue;
+  background-color: white;
+  border: 2px solid black;
 }
 
 .kitchenlight {
   position: absolute;
   top: 1058px;
-  left: 571px;
+  left: 568px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 /*cupboard objects*/
 
 .cupboardoor {
   position: absolute;
-  top: 1220px;
-  left: 691px;
+  top: 1217px;
+  left: 688px;
   width: 7px;
-  height: 56px;
-  background-color: green;
+  height: 62px;
+  border: 2px solid black;
 }
 
 .cupboardlight {
   position: absolute;
   top: 1210px;
-  left: 807px;
+  left: 804px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 /*hall objects*/
 .mainentrance {
   position: absolute;
-  top: 870px;
-  left: 1246px;
-  width: 10px;
+  top: 873px;
+  left: 1242px;
+  width: 12px;
   height: 75px;
-  background-color: green;
+  border: 2px solid black;
 }
 .livingroomwindow {
   position: absolute;
-  top: 1062px;
-  left: 1245px;
-  width: 8px;
-  height: 93px;
-  background-color: blue;
+    top: 1065px;
+    left: 1247px;
+    width: 7px;
+    height: 93px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .roomlight {
   position: absolute;
-  top: 876px;
-  left: 1082px;
+  top: 877px;
+  left: 1080px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 .roomheating {
   position: absolute;
-  top: 886px;
+  top: 881px;
   left: 792px;
   width: 10px;
   height: 24px;
-  background-color: rgb(226, 72, 72);
+  border: 2px solid black;
 }
 
 /*parking objects*/
 .parkingentrance {
   position: absolute;
-  top: 1458px;
-  left: 905px;
-  width: 94px;
+  top: 1460px;
+  left: 897px;
+  width: 102px;
   height: 12px;
-  background-color: green;
+  border: 2px solid black;
 }
 
 .roomentranceparkingdoor {
   position: absolute;
-  top: 1298px;
-  left: 915px;
-  width: 56px;
+  top: 1294px;
+  left: 917px;
+  width: 58px;
   height: 13px;
-  background-color: green;
+  border: 2px solid black;
 }
 
 .parkinglight {
   position: absolute;
-  top: 1350px;
-  left: 978px;
+  top: 1345px;
+  left: 972px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: gray;
+  border: 2px solid black;
 }
 
 /*objects Sprayer*/
 .Sprayer1 {
   position: absolute;
-  top: 1436px;
+  top: 1435px;
   left: 1456px;
   width: 87px;
   height: 9px;
-  background-color: rgb(209, 179, 10);
+  border: 2px solid black;
 }
 
 .Sprayer2 {
@@ -458,7 +474,16 @@
   left: 304px;
   width: 87px;
   height: 9px;
-  background-color: rgb(209, 179, 10);
+  border: 2px solid black;
+}
+
+.aspiradora {
+  position: absolute;
+  top: 1135px;
+  left: 802px;
+  width: 30px;
+  height: 9px;
+  border: 2px solid black;
 }
 .cambiodecolor{
   background-color: red;

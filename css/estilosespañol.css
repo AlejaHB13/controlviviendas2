@@ -52,6 +52,15 @@
     border-radius: 3px;
 }
 
+.cuadrito7 {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    background-color: rgb(204, 1, 223);
+    border-radius: 3px;
+}
+
 .botonactivar {
     position: absolute;
     top: 110px;
@@ -120,11 +129,11 @@
 /*Objetos habitacion principal*/
 .puertahabprincipal {
     position: absolute;
-    top: 785px;
+    top: 783px;
     left: 733px;
     width: 5px;
     height: 68px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanahabprincipal {
@@ -133,7 +142,8 @@
     left: 285px;
     width: 83px;
     height: 7px;
-    background-color: blue;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillohabprincipal {
@@ -143,7 +153,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 .calefacionhabprincipal {
@@ -152,7 +162,7 @@
     left: 325px;
     width: 8px;
     height: 16px;
-    background-color: rgb(226, 72, 72);
+    border: 2px solid black;
 }
 
 .tvhabprincipal {
@@ -161,26 +171,27 @@
     left: 390px;
     width: 100px;
     height: 7px;
-    background-color: rgb(231, 141, 37);
+    border: 2px solid black;
 }
 
 /*Objetos habitacion principal 2*/
 .puertahabprincipal2 {
     position: absolute;
     top: 783px;
-    left: 923px;
-    width: 61px;
+    left: 920px;
+    width: 64px;
     height: 8px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanahabprincipal2 {
     position: absolute;
     top: 466px;
     left: 830px;
-    width: 68px;
+    width: 75px;
     height: 7px;
-    background-color: blue;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillohabprincipal2 {
@@ -190,7 +201,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 .calefacionhabprincipal2 {
@@ -199,7 +210,7 @@
     left: 941px;
     width: 15px;
     height: 10px;
-    background-color: rgb(226, 72, 72);
+    border: 2px solid black;
 }
 
 .tvhabprincipal2 {
@@ -208,26 +219,27 @@
     left: 688px;
     width: 79px;
     height: 7px;
-    background-color: rgb(231, 141, 37);
+    border: 2px solid black;
 }
 
 /*Objetos habitacion 3*/
 .puertahab3 {
     position: absolute;
-    top: 785px;
+    top: 783px;
     left: 1156px;
     width: 5px;
     height: 68px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanahab3 {
     position: absolute;
-    top: 653px;
-    left: 1496px;
+    top: 652px;
+    left: 1494px;
     width: 8px;
-    height: 73px;
-    background-color: blue;
+    height: 75px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillohab3 {
@@ -237,7 +249,7 @@
     width: 27px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 .calefacionhab3 {
@@ -246,7 +258,7 @@
     left: 1212px;
     width: 19px;
     height: 9px;
-    background-color: rgb(226, 72, 72);
+    border: 2px solid black;
 }
 
 /*Objetos baño principal*/
@@ -256,16 +268,17 @@
     left: 264px;
     width: 85px;
     height: 6px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanabañoprincipal {
     position: absolute;
     top: 924px;
-    left: 255px;
-    width: 6px;
+    left: 253px;
+    width: 7px;
     height: 48px;
-    background-color: blue;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillobañoprincipal {
@@ -275,26 +288,27 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos baño2*/
 .puertabaño2 {
     position: absolute;
     top: 777px;
-    left: 1002px;
-    width: 57px;
+    left: 996px;
+    width: 65px;
     height: 8px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanabaño2 {
     position: absolute;
     top: 466px;
-    left: 1040px;
+    left: 1038px;
     width: 75px;
-    height: 8px;
-    background-color: blue;
+    height: 7px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillobaño2 {
@@ -304,7 +318,7 @@
     width: 12px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos zonalavado*/
@@ -314,7 +328,7 @@
     left: 368px;
     width: 6px;
     height: 65px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanazonalavado {
@@ -322,8 +336,9 @@
     top: 1300px;
     left: 275px;
     width: 75px;
-    height: 6px;
-    background-color: blue;
+    height: 7px;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillozonalavado {
@@ -333,7 +348,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos cocina */
@@ -344,7 +359,8 @@
     left: 600px;
     width: 75px;
     height: 6px;
-    background-color: blue;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillococina {
@@ -354,7 +370,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos alacena */
@@ -364,8 +380,8 @@
     top: 1222px;
     left: 688px;
     width: 7px;
-    height: 65px;
-    background-color: green;
+    height: 62px;
+    border: 2px solid black;
 }
 
 .bombilloalacena {
@@ -375,26 +391,27 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos sala*/
 .puertasala {
     position: absolute;
     top: 878px;
-    left: 1240px;
+    left: 1242px;
     width: 12px;
     height: 75px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .ventanasala {
     position: absolute;
-    top: 1072px;
-    left: 1243px;
-    width: 8px;
+    top: 1070px;
+    left: 1244px;
+    width: 7px;
     height: 93px;
-    background-color: blue;
+    background-color: white;
+    border: 2px solid black;
 }
 
 .bombillosala {
@@ -404,7 +421,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 .calefacionsala {
@@ -413,17 +430,17 @@
     left: 792px;
     width: 10px;
     height: 24px;
-    background-color: rgb(226, 72, 72);
+    border: 2px solid black;
 }
 
 /*Objetos parqueadero*/
 .puertaentradapar {
     position: absolute;
-    top: 1458px;
-    left: 905px;
-    width: 94px;
+    top: 1465px;
+    left: 897px;
+    width: 102px;
     height: 12px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .puertaentradasalapar {
@@ -432,7 +449,7 @@
     left: 915px;
     width: 56px;
     height: 13px;
-    background-color: green;
+    border: 2px solid black;
 }
 
 .bombilloparqueadero {
@@ -442,7 +459,7 @@
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: gray;
+    border: 2px solid black;
 }
 
 /*Objetos roseador*/
@@ -452,7 +469,7 @@
     left: 1454px;
     width: 87px;
     height: 9px;
-    background-color: rgb(209, 179, 10);
+    border: 2px solid black;
 }
 
 .roseador2 {
@@ -461,7 +478,16 @@
     left: 300px;
     width: 87px;
     height: 9px;
-    background-color: rgb(209, 179, 10);
+    border: 2px solid black;
+}
+
+.aspiradora {
+    position: absolute;
+    top: 1140px;
+    left: 798px;
+    width: 30px;
+    height: 9px;
+    border: 2px solid black;
 }
 
 .cambiodecolor {
