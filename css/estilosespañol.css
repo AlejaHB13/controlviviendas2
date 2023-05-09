@@ -1,3 +1,30 @@
+#canvas {
+    border: 1px solid black;
+    position: absolute;
+    left: 1310px;
+    top: 1040px;
+  }
+
+#video1{
+    position: absolute;
+    left: 1450px;
+    top: 1040px; 
+}
+  
+  #detectionAction{
+    width: 10px;
+    height: 10px;
+    background: blueviolet;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 955px;
+    left: 1320px;
+    z-index: 1;
+  }
+
+  
 .cuadrito {
     display: inline-block;
     width: 13px;
