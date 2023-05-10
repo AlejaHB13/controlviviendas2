@@ -10,90 +10,11 @@
     <script src="https://unpkg.com/ml5@0.7.1/dist/ml5.min.js"></script>
     <link rel="stylesheet" href="css/estilosespañol.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/artyom.window.js"></script>
 </head>
 
-<script>
-
-    var recognition = new webkitSpeechRecognition();
-    recognition.lang = 'es-ES'; // Idioma de reconocimiento de voz
-    recognition.continuous = false;
-    recognition.interimResults = false;
-
-    function mostrarAlerta() {
-        var alerta = document.querySelector('.alerta');
-        alerta.classList.add('mostrando');
-        setTimeout(function () {
-            alerta.classList.remove('mostrando');
-        }, 60000); // 60000 milisegundos = 1 minuto
-    }
-
-    recognition.onresult = function (event) {
-        var transcript = event.results[0][0].transcript.toLowerCase();
-        if (transcript.indexOf("colores") !== -1) {
-            mostrarAlerta();
-        }
-    };
-
-    recognition.onerror = function (event) {
-        console.log('Error de reconocimiento de voz: ', event.error);
-    };
-
-    function startRecognition() {
-        recognition.onresult = function (event) {
-            const command = event.results[0][0].transcript;
-            //habitacion principal
-            if (command.includes('abrir puerta habitación principal')) {
-                document.getElementById('puerta-hab-principal').style.backgroundColor = 'green';
-            } else if (command.includes('cerrar puerta habitación principal')) {
-                document.getElementById('puerta-hab-principal').style.backgroundColor = 'blue';
-            }else if (command.includes('abrir ventana habitación principal')) {
-                document.getElementById('ventana-hab-principal').style.backgroundColor = 'blue';
-            }else if (command.includes('cerrar ventana habitación principal')) {
-                document.getElementById('ventana-hab-principal').style.backgroundColor = 'red';
-            }else if (command.includes('encender bombillo habitación principal')) {
-                document.getElementById('bombillo-hab-principal').style.backgroundColor = 'yellow';
-            }else if (command.includes('apagar bombillo habitación principal')) {
-                document.getElementById('bombillo-hab-principal').style.backgroundColor = 'grey';
-            }else if (command.includes('encender calefación habitación principal')) {
-                document.getElementById('calefacion-hab-principal').style.backgroundColor = 'green';
-            }else if (command.includes('apagar calefación habitación principal')) {
-                document.getElementById('calefacion-hab-principal').style.backgroundColor = 'red';
-            }else if (command.includes('encender televisión habitación principal')) {
-                document.getElementById('tv-hab-principal').style.backgroundColor = 'green';
-            }else if (command.includes('apagar televisión habitación principal')) {
-                document.getElementById('tv-hab-principal').style.backgroundColor = 'orange';
-            }
-            //habitacion 2
-            else if (command.includes('abrir puerta habitación 2')) {
-                document.getElementById('puerta-hab-principal2').style.backgroundColor = 'blue';
-            }else if (command.includes('cerrar puerta habitación 2')) {
-                document.getElementById('puerta-hab-principal2').style.backgroundColor = 'blue';
-            }else if (command.includes('abrir ventana habitación 2')) {
-                document.getElementById('ventana-hab-principal2').style.backgroundColor = 'blue';
-            }else if (command.includes('cerrar ventana habitación 2')) {
-                document.getElementById('ventana-hab-principal2').style.backgroundColor = 'red';
-            }else if (command.includes('encender bombillo habitación 2')) {
-                document.getElementById('bombillo-hab-principal2').style.backgroundColor = 'yellow';
-            }else if (command.includes('apagar bombillo habitación 2')) {
-                document.getElementById('bombillo-hab-principal2').style.backgroundColor = 'grey';
-            }else if (command.includes('encender calefación habitación 2')) {
-                document.getElementById('calefacion-hab-principal2').style.backgroundColor = 'green';
-            }else if (command.includes('apagar calefación habitación 2')) {
-                document.getElementById('calefacion-hab-principal2').style.backgroundColor = 'red';
-            }else if (command.includes('encender televisión habitación 2')) {
-                document.getElementById('tv-hab-principal2').style.backgroundColor = 'green';
-            }else if (command.includes('apagar televisión habitación 2')) {
-                document.getElementById('tv-hab-principal2').style.backgroundColor = 'orange';
-            }
-            recognition.continuous = true;
-        recognition.start();
-        }   
-    }
-</script>
-
 <body>
-
-    <div id="colores" class="btn" onclick="mostrarAlerta()">colores de objetos</div>
+    <div id="colores" class="btn" onclick="mostrarAlerta()">Colores de objetos</div>
     <div class="alerta">
         <ol class="sin-numero">
             <li>Objetos casa:</li>
@@ -109,7 +30,6 @@
         <li class="sin-numero">Al estar cerrados o apagados los objetos de la casa no se mostrara ningun color</li>
         <li class="sin-numero">Este mensaje  se cerrará automáticamente en 1 minuto.</li>
     </div>
-    <div class="botonactivar" onclick="startRecognition()"> Activar voz</div>
     <div class="centrado">
         <div class="alert alert-primary " role="alert">
             <img src="imagenes\imginfo.png" width="90" height="50">
@@ -120,12 +40,18 @@
         <h1></h1>
         <h1>Plano casa inteligente</h1>
         <img id="plano" src="imagenes/planoespañol.png" alt="Plano en español">
-        
+
+         <!--activavión camara-->
         <div >
             <button id="detectionAction" onclick="toggleDetecting()">Iniciar detección</button>
         </div>
-        <script src="app.js"></script>
-        
+        <script src="js/app.js"></script>
+
+        <!--Objetos audio-->
+        <p class="botonactivar" id="activar">Activar voz</p>
+
+        <script src="js/comandosespañol.js"></script>
+
         <!--Objetos habitacion principal-->
         <div class="puertahabprincipal" id="puerta-hab-principal"></div>
         <div class="ventanahabprincipal" id="ventana-hab-principal"></div>
@@ -185,7 +111,5 @@
         <div class="roseador1" id="roseador-1"></div>
         <div class="roseador2" id="roseador-2"></div>
     </div>
-
 </body>
-
 </html>
