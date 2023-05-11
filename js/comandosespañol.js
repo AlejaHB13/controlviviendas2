@@ -12,16 +12,23 @@ function mostrarAlerta() {
         alerta.classList.remove('mostrando');
     }, 30000); // 30000 milisegundos = 30 segundos
 }
-  
+artyom.addCommands({
+    indexes: ["volver atrás"],
+    action: function () {
+        history.back();
+    }
+});
+artyom.addCommands({
+    indexes: ["colores"],
+    action: function () {
+        artyom.say("abriendo menu de colores");
+        mostrarAlerta();
+    }
+});
+
 
 artyom.addCommands([
-    {
-        indexes: ["colores"],
-        action: function () {
-            artyom.say("abriendo menu de colores");
-            document.getElementById('colores').mostrarAlerta();
-        }
-    },
+
     /*comando voz habitación principal*/
     /*cerrar y encender*/
     {
@@ -59,7 +66,7 @@ artyom.addCommands([
             document.getElementById('tv-hab-principal').style.backgroundColor = 'orange';
         }
     },
-      /*abrir y apagar*/
+    /*abrir y apagar*/
 
     {
         indexes: ["abrir ventana habitación principal"],
@@ -133,7 +140,7 @@ artyom.addCommands([
             document.getElementById('tv-hab-principal2').style.backgroundColor = 'orange';
         }
     },
-     /*abrir y apagar*/
+    /*abrir y apagar*/
 
     {
         indexes: ["abrir ventana habitación dos"],
@@ -341,7 +348,7 @@ artyom.addCommands([
             document.getElementById('bombillo-cocina').style.backgroundColor = 'yellow';
         }
     },
-     /*abrir y apagar*/
+    /*abrir y apagar*/
 
     {
         indexes: ['abrir ventana cocina'],
@@ -373,7 +380,7 @@ artyom.addCommands([
             document.getElementById('bombillo-alacena').style.backgroundColor = 'yellow';
         }
     },
-     /*abrir y apagar*/
+    /*abrir y apagar*/
 
     {
         indexes: ['abrir puerta alacena'],
@@ -486,7 +493,7 @@ artyom.addCommands([
             document.getElementById('bombillo-parqueadero').style.backgroundColor = 'yellow';
         }
     },
-     /*abrir y apagar*/
+    /*abrir y apagar*/
 
     {
         indexes: ['abrir puerta entrada parqueadero'],
@@ -525,7 +532,7 @@ artyom.addCommands([
             document.getElementById('roseador-2').style.backgroundColor = 'grey';
         }
     },
-     /*apagar*/
+    /*apagar*/
 
     {
         indexes: ['apagar roseador uno'],

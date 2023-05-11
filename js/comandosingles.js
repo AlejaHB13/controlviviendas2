@@ -7,20 +7,28 @@ document.querySelector("#activar").addEventListener('click', function () {
 
 function mostrarAlerta() {
     var alerta = document.querySelector('.alerta');
-    alerta.classList.add('showing');
+    alerta.classList.add('mostrando');
     setTimeout(function () {
-        alerta.classList.remove('showing');
+        alerta.classList.remove('mostrando');
     }, 30000); // 30000 milisegundos = 30 segundos
 }
+artyom.addCommands({
+    indexes: ["back"],
+    action: function () {
+        history.back();
+    }
+});
+
 
 artyom.addCommands([
     {
         indexes: ["colors"],
         action: function () {
             artyom.say("opening color menu");
-            document.getElementById('colors').mostrarAlerta();
+            mostrarAlerta();
         }
     },
+    
     /*voice command main room*/
     /* close and turn on */
     {
@@ -98,72 +106,72 @@ artyom.addCommands([
     /*voice command room 2*/
     /*close and turn on*/
     {
-        indexes: ["close window room 2","close window room two"],
+        indexes: ["close window room 2", "close window room two"],
         action: function () {
             artyom.say("closing window room 2");
             document.getElementById('window-room2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ["close door room 2","close door room two"],
+        indexes: ["close door room 2", "close door room two"],
         action: function () {
             artyom.say("closing door room 2");
             document.getElementById('room-door2').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ["turn on light room two" ,"turn on light room two"],
+        indexes: ["turn on light room two", "turn on light room two"],
         action: function () {
             artyom.say("turning on light room 2");
             document.getElementById('light-room2').style.backgroundColor = 'yellow';
         }
     },
     {
-        indexes: ["turn on heating room 2","turn on heating room two"],
+        indexes: ["turn on heating room 2", "turn on heating room two"],
         action: function () {
             artyom.say("turning on heating room 2");
             document.getElementById('healting-room2').style.backgroundColor = 'red';
         }
     },
     {
-        indexes: ["turn on tv room 2","turn on tv room two"],
+        indexes: ["turn on tv room 2", "turn on tv room two"],
         action: function () {
             artyom.say("turning on tv roomn 2");
             document.getElementById('tv-room2').style.backgroundColor = 'orange';
         }
     },
-     /*open and to turn off*/
+    /*open and to turn off*/
 
     {
-        indexes: ["open window room 2","open window room two"],
+        indexes: ["open window room 2", "open window room two"],
         action: function () {
             artyom.say("opening window room 2");
             document.getElementById('window-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["open door room 2","open door room two"],
+        indexes: ["open door room 2", "open door room two"],
         action: function () {
             artyom.say("opening room door 2");
             document.getElementById('room-door2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off room light 2","turn off room light two"],
+        indexes: ["turn off room light 2", "turn off room light two"],
         action: function () {
             artyom.say("turning off room light 2");
             document.getElementById('light-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off room heating 2","turn off room heating two"],
+        indexes: ["turn off room heating 2", "turn off room heating two"],
         action: function () {
             artyom.say("turning off room heating 2");
             document.getElementById('healting-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off tv room 2","turn off tv room two"],
+        indexes: ["turn off tv room 2", "turn off tv room two"],
         action: function () {
             artyom.say("turning off tv room 2");
             document.getElementById('tv-room2').style.backgroundColor = 'white';
@@ -173,58 +181,58 @@ artyom.addCommands([
     /*close and turn on*/
 
     {
-        indexes: ["close window room 3","close window room three"],
+        indexes: ["close window room 3", "close window room three"],
         action: function () {
             artyom.say("closing window room 3");
             document.getElementById('window-room3').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ["close door room3","close door room three"],
+        indexes: ["close door room3", "close door room three"],
         action: function () {
             artyom.say("closing door room 3");
             document.getElementById('room-door3').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ["turn on light room 3","turn on light room three"],
+        indexes: ["turn on light room 3", "turn on light room three"],
         action: function () {
             artyom.say("turning on light room 3");
             document.getElementById('light-room3').style.backgroundColor = 'yellow';
         }
     },
     {
-        indexes: ["turn on heating room 3","turn on heating room three"],
+        indexes: ["turn on heating room 3", "turn on heating room three"],
         action: function () {
             artyom.say("turning on heating room 3");
             document.getElementById('healting-room3').style.backgroundColor = 'red';
         }
     },
-   /*open and to turn off*/
+    /*open and to turn off*/
 
     {
-        indexes: ["open window room 3","open window room three"],
+        indexes: ["open window room 3", "open window room three"],
         action: function () {
             artyom.say("opening window room 3");
             document.getElementById('window-room3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["open door room 3","open door room three"],
+        indexes: ["open door room 3", "open door room three"],
         action: function () {
             artyom.say("opening door room 3");
             document.getElementById('room-door3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off room light 3","turn off room light three"],
+        indexes: ["turn off room light 3", "turn off room light three"],
         action: function () {
             artyom.say("turning off room light 3");
             document.getElementById('light-room3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off room heating 3","turn off room heating three"],
+        indexes: ["turn off room heating 3", "turn off room heating three"],
         action: function () {
             artyom.say("turning off room heating 3");
             document.getElementById('healting-room3').style.backgroundColor = 'white';
@@ -281,21 +289,21 @@ artyom.addCommands([
     /*voice command Bathroom 2*/
     /*close and turn on*/
     {
-        indexes: ["close bathroom window 2","close bathroom window two"],
+        indexes: ["close bathroom window 2", "close bathroom window two"],
         action: function () {
             artyom.say("closing bathroom window 2");
             document.getElementById('bath-window2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ["close bathroom door 2","close bathroom door two"],
+        indexes: ["close bathroom door 2", "close bathroom door two"],
         action: function () {
             artyom.say("closing bathroom door 2");
             document.getElementById('bath-door2').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ["turn on bathroom light 2","turn on bathroom light two"],
+        indexes: ["turn on bathroom light 2", "turn on bathroom light two"],
         action: function () {
             artyom.say("turning on luz bathroom light 2");
             document.getElementById('bath-light2').style.backgroundColor = 'yellow';
@@ -303,21 +311,21 @@ artyom.addCommands([
     },
     /*open and to turn off*/
     {
-        indexes: ["open window bathroom 2","open window bathroom two"],
+        indexes: ["open window bathroom 2", "open window bathroom two"],
         action: function () {
             artyom.say("opening window bathroom 2s");
             document.getElementById('bath-window2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ["open door bathroom 2","open door bathroom two"],
+        indexes: ["open door bathroom 2", "open door bathroom two"],
         action: function () {
             artyom.say("opening door bathroom 2");
             document.getElementById('bath-door2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off light bathroom 2","turn off light bathroom two"],
+        indexes: ["turn off light bathroom 2", "turn off light bathroom two"],
         action: function () {
             artyom.say("turning off light bathroom 2");
             document.getElementById('bath-light2').style.backgroundColor = 'white';
@@ -510,30 +518,30 @@ artyom.addCommands([
     /*voice command Sprayer*/
     /*close*/
     {
-        indexes: ["turn on sprayer one","turn on sprayer 1"],
+        indexes: ["turn on sprayer one", "turn on sprayer 1"],
         action: function () {
             artyom.say("turning on sprayer one");
             document.getElementById('Sprayer-1').style.backgroundColor = 'grey';
         }
     },
     {
-        indexes: ["turn on sprayer 2","turn on sprayer two"],
+        indexes: ["turn on sprayer 2", "turn on sprayer two"],
         action: function () {
             artyom.say("turning on sprayer 2");
             document.getElementById('Sprayer-2').style.backgroundColor = 'grey';
         }
     },
-     /*turn off*/
+    /*turn off*/
 
     {
-        indexes: ["turn off sprayer one","turn off sprayer 1"],
+        indexes: ["turn off sprayer one", "turn off sprayer 1"],
         action: function () {
             artyom.say("turning off sprayer one");
             document.getElementById('Sprayer-1').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ["turn off on sprayer 2","turn off sprayer two"],
+        indexes: ["turn off on sprayer 2", "turn off sprayer two"],
         action: function () {
             artyom.say("turning off sprayer 2");
             document.getElementById('Sprayer-2').style.backgroundColor = 'white';
