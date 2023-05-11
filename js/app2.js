@@ -29,27 +29,6 @@ function draw() {
   }
 }
 
-function drawResult(object) {
-  boundingBox(object);
-  drawLabel(object);
-}
-
-function boundingBox(object) {
-  stroke('blue');
-  strokeWeight(6);
-  noFill();
-  rect(object.x, object.y, object.width, object.height);
-}
-function drawLabel(object) {
-  noStroke();
-  if (object.label === 'person') {
-    fill('white');
-  } else if (object.label === 'dog') {
-    fill('red');
-  }
-  textSize(34);
-  text(object.label, object.x + 15, object.y + 34);
-}
 
 function onDetected(error, results) {
   if (error) {
@@ -78,18 +57,6 @@ function onDetected(error, results) {
 
 function detect() {
   detector.detect(video, onDetected);
-}
-
-function toggleVideo() {
-  if (!video) return;
-  if (videoVisibility) {
-    video.hide();
-    videoAction.innerText = 'Activar Video';
-  } else {
-    video.show();
-    videoAction.innerText = 'Desactivar Video';
-  }
-  videoVisibility = !videoVisibility;
 }
 
 function toggleDetecting() {

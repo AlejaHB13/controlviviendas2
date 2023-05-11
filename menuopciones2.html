@@ -9,7 +9,7 @@
 </head>
 <script>
   const recognition = new webkitSpeechRecognition();
-  recognition.lang = 'en-US';
+  recognition.lang = 'en-GB';
 
   recognition.onresult = (event) => {
     const command = event.results[0][0].transcript.toLowerCase();
@@ -18,10 +18,7 @@
       const inicioLink = document.getElementById('flat').querySelector('a');
       window.location.href = inicioLink.href;
     } else if (command === 'profile') {
-      const inicioLink = document.getElementById('perfil-del-usuario').querySelector('a');
-      window.location.href = inicioLink.href;
-    } else if (command === 'objects') {
-      const inicioLink = document.getElementById('objetos-casa').querySelector('a');
+      const inicioLink = document.getElementById('profile').querySelector('a');
       window.location.href = inicioLink.href;
     }
   };
@@ -58,7 +55,7 @@
           <th>If you enable the voice option say 'FLAT'</th>
           <h1></h1>
           <li id="profile">
-            <a id="perfil-del-usuario" class="boton" href="perfilIngles.html">User profile</a>
+            <a id="profile" class="boton" href="perfilIngles.html">User profile</a>
           </li>
           <h1></h1>
           <th>If you enable the voice option say 'PROFILE'</th>
