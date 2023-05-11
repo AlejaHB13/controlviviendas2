@@ -10,7 +10,7 @@ function mostrarAlerta() {
     alerta.classList.add('showing');
     setTimeout(function () {
         alerta.classList.remove('showing');
-    }, 60000); // 60000 milisegundos = 1 minuto
+    }, 30000); // 30000 milisegundos = 30 segundos
 }
 
 artyom.addCommands([
@@ -21,7 +21,8 @@ artyom.addCommands([
             document.getElementById('colors').mostrarAlerta();
         }
     },
-    /*comando voz main room*/
+    /*voice command main room*/
+    /* close and turn on */
     {
         indexes: ["close main room window"],
         action: function () {
@@ -51,12 +52,13 @@ artyom.addCommands([
         }
     },
     {
-        indexes: ['turn on tv master bedroom'],
+        indexes: ['turn on tv main room'],
         action: function () {
             artyom.say("turning on tv master bedroom");
             document.getElementById('"main-room-tv').style.backgroundColor = 'orange';
         }
     },
+    /*open and to turn off*/
 
     {
         indexes: ["open main room window"],
@@ -93,467 +95,455 @@ artyom.addCommands([
             document.getElementById('main-room-tv').style.backgroundColor = 'white';
         }
     },
-    /*comando voz room two*/
+    /*voice command room 2*/
+    /*close and turn on*/
     {
-        indexes: ["close window room two"],
+        indexes: ["close window room 2","close window room two"],
         action: function () {
-            artyom.say("closing window room two");
+            artyom.say("closing window room 2");
             document.getElementById('window-room2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['close room door two'],
+        indexes: ["close door room 2","close door room two"],
         action: function () {
-            artyom.say("closing door room two");
+            artyom.say("closing door room 2");
             document.getElementById('room-door2').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['turn on light room two '],
+        indexes: ["turn on light room two" ,"turn on light room two"],
         action: function () {
-            artyom.say("turning on light room two");
+            artyom.say("turning on light room 2");
             document.getElementById('light-room2').style.backgroundColor = 'yellow';
         }
     },
     {
-        indexes: ['turn on heating room two'],
+        indexes: ["turn on heating room 2","turn on heating room two"],
         action: function () {
-            artyom.say("turning on heating room two");
+            artyom.say("turning on heating room 2");
             document.getElementById('healting-room2').style.backgroundColor = 'red';
         }
     },
     {
-        indexes: ['turn on tv room two'],
+        indexes: ["turn on tv room 2","turn on tv room two"],
         action: function () {
-            artyom.say("turning on tv roomn two");
+            artyom.say("turning on tv roomn 2");
             document.getElementById('tv-room2').style.backgroundColor = 'orange';
         }
     },
+     /*open and to turn off*/
 
     {
-        indexes: ["open window room two"],
+        indexes: ["open window room 2","open window room two"],
         action: function () {
-            artyom.say("opening window room two");
+            artyom.say("opening window room 2");
             document.getElementById('window-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['open room door two'],
+        indexes: ["open door room 2","open door room two"],
         action: function () {
-            artyom.say("abriendo puerta habitación two");
+            artyom.say("opening room door 2");
             document.getElementById('room-door2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz habitación two'],
+        indexes: ["turn off room light 2","turn off room light two"],
         action: function () {
-            artyom.say("apagando luz habitación two");
-            document.getElementById('main-room-lightbulbtwo').style.backgroundColor = 'white';
+            artyom.say("turning off room light 2");
+            document.getElementById('light-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar calefacción habitación two'],
+        indexes: ["turn off room heating 2","turn off room heating two"],
         action: function () {
-            artyom.say("apagando calefacción habitación two");
-            document.getElementById('main-room-heatingtwo').style.backgroundColor = 'white';
+            artyom.say("turning off room heating 2");
+            document.getElementById('healting-room2').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar televisión habitación two'],
+        indexes: ["turn off tv room 2","turn off tv room two"],
         action: function () {
-            artyom.say("apagando relevisión habitación two");
-            document.getElementById('main-room-tvtwo').style.backgroundColor = 'white';
+            artyom.say("turning off tv room 2");
+            document.getElementById('tv-room2').style.backgroundColor = 'white';
         }
     },
-    /*comando voz habitación 3*/
+    /*voice command habitación 3*/
+    /*close and turn on*/
 
     {
-        indexes: ["cerrar ventana habitación 3"],
+        indexes: ["close window room 3","close window room three"],
         action: function () {
-            artyom.say("cerrando ventana habitación 3");
-            document.getElementById('ventana-hab-3').style.backgroundColor = 'blue';
+            artyom.say("closing window room 3");
+            document.getElementById('window-room3').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['cerrar puerta habitación 3'],
+        indexes: ["close door room3","close door room three"],
         action: function () {
-            artyom.say("cerrando puerta habitación 3");
-            document.getElementById('puerta-hab-3').style.backgroundColor = 'green';
+            artyom.say("closing door room 3");
+            document.getElementById('room-door3').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['encender luz habitación 3'],
+        indexes: ["turn on light room 3","turn on light room three"],
         action: function () {
-            artyom.say("encendiendo luz habitación 3");
-            document.getElementById('main-room-lightbulbtwo').style.backgroundColor = 'yellow';
+            artyom.say("turning on light room 3");
+            document.getElementById('light-room3').style.backgroundColor = 'yellow';
         }
     },
     {
-        indexes: ['encender calefacción habitación 3'],
+        indexes: ["turn on heating room 3","turn on heating room three"],
         action: function () {
-            artyom.say("encendiendo calefacción habitación 3");
-            document.getElementById('calefacion-hab-3').style.backgroundColor = 'red';
+            artyom.say("turning on heating room 3");
+            document.getElementById('healting-room3').style.backgroundColor = 'red';
         }
     },
-    {
-        indexes: ['encender televisión habitación 3'],
-        action: function () {
-            artyom.say("encendiendo relevisión habitación 3");
-            document.getElementById('tv-hab-3').style.backgroundColor = 'orange';
-        }
-    },
+   /*open and to turn off*/
 
     {
-        indexes: ["abrir ventana habitación 3"],
+        indexes: ["open window room 3","open window room three"],
         action: function () {
-            artyom.say("abriendo ventana habitación 3");
-            document.getElementById('ventana-hab-3').style.backgroundColor = 'white';
+            artyom.say("opening window room 3");
+            document.getElementById('window-room3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['abrir puerta habitación 3'],
+        indexes: ["open door room 3","open door room three"],
         action: function () {
-            artyom.say("abriendo puerta habitación 3");
-            document.getElementById('puerta-hab-3').style.backgroundColor = 'white';
+            artyom.say("opening door room 3");
+            document.getElementById('room-door3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz habitación 3'],
+        indexes: ["turn off room light 3","turn off room light three"],
         action: function () {
-            artyom.say("apagando luz habitación 3");
-            document.getElementById('main-room-lightbulbtwo').style.backgroundColor = 'white';
+            artyom.say("turning off room light 3");
+            document.getElementById('light-room3').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar calefacción habitación 3'],
+        indexes: ["turn off room heating 3","turn off room heating three"],
         action: function () {
-            artyom.say("apagando calefacción habitación 3");
-            document.getElementById('calefacion-hab-3').style.backgroundColor = 'white';
+            artyom.say("turning off room heating 3");
+            document.getElementById('healting-room3').style.backgroundColor = 'white';
         }
     },
-    {
-        indexes: ['apagar televisión habitación 3'],
-        action: function () {
-            artyom.say("apagando relevisión habitación 3");
-            document.getElementById('tv-hab-3').style.backgroundColor = 'white';
-        }
-    },
-    /*comando voz habitación baño principal*/
+    /*voice command Main bathroom*/
+    /*close and turn on*/
 
     {
-        indexes: ["cerrar ventana baño principal"],
+        indexes: ["close main bathroom window"],
         action: function () {
-            artyom.say("cerrando ventana baño principal");
-            document.getElementById('ventana-baño-principal').style.backgroundColor = 'blue';
+            artyom.say("closing main bathroom window");
+            document.getElementById('main-bath-window').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['cerrar puerta baño principal'],
+        indexes: ['close main bathroom door'],
         action: function () {
-            artyom.say("cerrando puerta baño principal");
-            document.getElementById('puerta-baño-principal').style.backgroundColor = 'green';
+            artyom.say("closing main bathroom door");
+            document.getElementById('main-bath-door').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['encender luz baño principal'],
+        indexes: ['turn on main bathroom light'],
         action: function () {
-            artyom.say("encendiendo luz baño principal");
-            document.getElementById('bombillo-baño-principal').style.backgroundColor = 'yellow';
+            artyom.say("turning on main bathroom light");
+            document.getElementById('main-bath-light').style.backgroundColor = 'yellow';
         }
     },
+    /*open and to turn off*/
 
     {
-        indexes: ["abrir ventana baño principal"],
+        indexes: ["open main bathroom window"],
         action: function () {
-            artyom.say("abriendo ventana baño principal");
-            document.getElementById('ventana-baño-principal').style.backgroundColor = 'white';
+            artyom.say("opening main bathroom window");
+            document.getElementById('main-bath-window').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['abrir puerta baño principal'],
+        indexes: ['open main bathroom door'],
         action: function () {
-            artyom.say("abriendo puerta baño principal");
-            document.getElementById('puerta-baño-principal').style.backgroundColor = 'white';
+            artyom.say("opening main bathroom door");
+            document.getElementById('main-bath-door').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz baño principal'],
+        indexes: ['turn off main bathroom light'],
         action: function () {
-            artyom.say("apagando luz baño principal");
-            document.getElementById('bombillo-baño-principal').style.backgroundColor = 'white';
+            artyom.say("turning off main bathroom light");
+            document.getElementById('main-bath-light').style.backgroundColor = 'white';
         }
     },
 
-    /*comando voz habitación baño two*/
+    /*voice command Bathroom 2*/
+    /*close and turn on*/
     {
-        indexes: ["cerrar ventana baño two"],
+        indexes: ["close bathroom window 2","close bathroom window two"],
         action: function () {
-            artyom.say("cerrando ventana baño two");
-            document.getElementById('ventana-bañotwo').style.backgroundColor = 'blue';
+            artyom.say("closing bathroom window 2");
+            document.getElementById('bath-window2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['cerrar puerta baño two'],
+        indexes: ["close bathroom door 2","close bathroom door two"],
         action: function () {
-            artyom.say("cerrando puerta baño two");
-            document.getElementById('puerta-bañotwo').style.backgroundColor = 'green';
+            artyom.say("closing bathroom door 2");
+            document.getElementById('bath-door2').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['encender luz baño two'],
+        indexes: ["turn on bathroom light 2","turn on bathroom light two"],
         action: function () {
-            artyom.say("encendiendo luz baño two");
-            document.getElementById('bombillo-bañotwo').style.backgroundColor = 'yellow';
+            artyom.say("turning on luz bathroom light 2");
+            document.getElementById('bath-light2').style.backgroundColor = 'yellow';
         }
     },
-    /*comando voz habitación cocina*/
+    /*open and to turn off*/
     {
-        indexes: ['cerrar ventana cocina'],
+        indexes: ["open window bathroom 2","open window bathroom two"],
         action: function () {
-            artyom.say("cerrando ventana cocina");
-            document.getElementById('ventana-cocina').style.backgroundColor = 'blue';
+            artyom.say("opening window bathroom 2s");
+            document.getElementById('bath-window2').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['encender luz cocina'],
+        indexes: ["open door bathroom 2","open door bathroom two"],
         action: function () {
-            artyom.say("encendiendo cocina");
-            document.getElementById('bombillo-cocina').style.backgroundColor = 'yellow';
+            artyom.say("opening door bathroom 2");
+            document.getElementById('bath-door2').style.backgroundColor = 'white';
         }
     },
+    {
+        indexes: ["turn off light bathroom 2","turn off light bathroom two"],
+        action: function () {
+            artyom.say("turning off light bathroom 2");
+            document.getElementById('bath-light2').style.backgroundColor = 'white';
+        }
+    },
+    /*voice command kitchen*/
+    /*close and turn on*/
+    {
+        indexes: ['close kitchen window'],
+        action: function () {
+            artyom.say("closing kitchen window");
+            document.getElementById('kitchen-window').style.backgroundColor = 'blue';
+        }
+    },
+    {
+        indexes: ['turn on kitchen light'],
+        action: function () {
+            artyom.say("turning on kitchen light");
+            document.getElementById('kitchen-light').style.backgroundColor = 'yellow';
+        }
+    },
+    /*open and to turn off*/
 
     {
-        indexes: ["abrir ventana baño two"],
+        indexes: ['open kitchen window'],
         action: function () {
-            artyom.say("abriendo ventana baño two");
-            document.getElementById('ventana-bañotwo').style.backgroundColor = 'white';
+            artyom.say("opening kitchen window");
+            document.getElementById('kitchen-window').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['abrir puerta baño two'],
+        indexes: ['turn off kitchen light'],
         action: function () {
-            artyom.say("abriendo puerta baño two");
-            document.getElementById('puerta-bañotwo').style.backgroundColor = 'white';
+            artyom.say("turning off kitchen light");
+            document.getElementById('kitchen-light').style.backgroundColor = 'wwhite';
+        }
+    },
+    /*voice command habitación cupboard*/
+    /*close and turn on*/
+    {
+        indexes: ['close cupboard door'],
+        action: function () {
+            artyom.say("closing cupboard door");
+            document.getElementById('cup-board-door').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['apagar luz baño two'],
+        indexes: ['turn on cupboard light'],
         action: function () {
-            artyom.say("apagando luz baño two");
-            document.getElementById('bombillo-bañotwo').style.backgroundColor = 'white';
+            artyom.say("turning on cupboard light");
+            document.getElementById('cup-board-light').style.backgroundColor = 'yellow';
         }
     },
-    /*comando voz habitación cocina*/
-    {
-        indexes: ['cerrar ventana cocina'],
-        action: function () {
-            artyom.say("cerrando ventana cocina");
-            document.getElementById('ventana-cocina').style.backgroundColor = 'blue';
-        }
-    },
-    {
-        indexes: ['encender luz cocina'],
-        action: function () {
-            artyom.say("encendiendo cocina");
-            document.getElementById('bombillo-cocina').style.backgroundColor = 'yellow';
-        }
-    },
+    /*open and to turn off*/
 
     {
-        indexes: ['abrir ventana cocina'],
+        indexes: ['open cupboard door'],
         action: function () {
-            artyom.say("abriendo ventana cocina");
-            document.getElementById('ventana-cocina').style.backgroundColor = 'white';
+            artyom.say("opening cupboard door");
+            document.getElementById('cup-board-door').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz cocina'],
+        indexes: ['turn off cupboard light'],
         action: function () {
-            artyom.say("apagando cocina");
-            document.getElementById('bombillo-cocina').style.backgroundColor = 'wwhite';
+            artyom.say("turning off cupboard light");
+            document.getElementById('cup-board-light').style.backgroundColor = 'white';
         }
     },
-    /*comando voz habitación alacena*/
+    /*voice command living room*/
+    /*close and turn on*/
     {
-        indexes: ['cerrar puerta alacena'],
+        indexes: ["close living room window"],
         action: function () {
-            artyom.say("cerrando puerta alacena");
-            document.getElementById('ventana-alacena').style.backgroundColor = 'green';
-        }
-    },
-    {
-        indexes: ['encender luz alacena'],
-        action: function () {
-            artyom.say("encendiendo luz alacena");
-            document.getElementById('bombillo-alacena').style.backgroundColor = 'yellow';
-        }
-    },
-
-    {
-        indexes: ['abrir puerta alacena'],
-        action: function () {
-            artyom.say("abriendo puerta alacena");
-            document.getElementById('ventana-alacena').style.backgroundColor = 'white';
+            artyom.say("closing living room window");
+            document.getElementById('living-room-window').style.backgroundColor = 'blue';
         }
     },
     {
-        indexes: ['apagar luz alacena'],
+        indexes: ['close door entrance living room'],
         action: function () {
-            artyom.say("apagando luz alacena");
-            document.getElementById('bombillo-alacena').style.backgroundColor = 'white';
-        }
-    },
-    /*comando voz sala*/
-    {
-        indexes: ["cerrar ventana sala"],
-        action: function () {
-            artyom.say("cerrando ventana sala");
-            document.getElementById('centana-sala').style.backgroundColor = 'blue';
+            artyom.say("closing puerta sala");
+            document.getElementById('main-entrance').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['cerrar puerta sala'],
+        indexes: ['turn on living room light'],
         action: function () {
-            artyom.say("cerrando puerta sala");
-            document.getElementById('puerta-sala').style.backgroundColor = 'green';
+            artyom.say("turning on living room light");
+            document.getElementById('room-light').style.backgroundColor = 'yellow';
         }
     },
     {
-        indexes: ['encender luz sala'],
+        indexes: ['turn on living room heating'],
         action: function () {
-            artyom.say("encendiendo luz sala");
-            document.getElementById('bombillo-sala').style.backgroundColor = 'yellow';
+            artyom.say("turning on living room heating");
+            document.getElementById('room-heating').style.backgroundColor = 'red';
         }
     },
     {
-        indexes: ['encender calefacción sala'],
+        indexes: ['turn on vacuum cleaner'],
         action: function () {
-            artyom.say("encendiendo calefacción sala");
-            document.getElementById('calefacion-sala').style.backgroundColor = 'red';
-        }
-    },
-    {
-        indexes: ['encender aspiradora'],
-        action: function () {
-            artyom.say("encendiendo aspiradora");
+            artyom.say("turning vacuum cleaner");
             document.getElementById('aspiradora').style.backgroundColor = 'purple';
         }
     },
+    /*open and to turn off*/
 
     {
-        indexes: ["abrir ventana sala"],
+        indexes: ["open living room window"],
         action: function () {
-            artyom.say("abriendo ventana sala");
-            document.getElementById('centana-sala').style.backgroundColor = 'white';
+            artyom.say("opening living room window");
+            document.getElementById('living-room-window').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['abrir puerta sala'],
+        indexes: ['open door entrance living room'],
         action: function () {
-            artyom.say("abriendo puerta sala");
-            document.getElementById('puerta-sala').style.backgroundColor = 'white';
+            artyom.say("opening door entrance living room");
+            document.getElementById('main-entrance').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz sala'],
+        indexes: ['turn off living room light'],
         action: function () {
-            artyom.say("apagando luz sala");
-            document.getElementById('bombillo-sala').style.backgroundColor = 'white';
+            artyom.say("turning off living room light");
+            document.getElementById('room-light').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar calefacción sala'],
+        indexes: ['turn off living room heating'],
         action: function () {
-            artyom.say("apagando calefacción sala");
-            document.getElementById('calefacion-sala').style.backgroundColor = 'white';
+            artyom.say("turning off living room heating");
+            document.getElementById('room-heating').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar aspiradora'],
+        indexes: ['turn off vacuum cleaner'],
         action: function () {
-            artyom.say("apagando aspiradora");
+            artyom.say("turning off vacuum cleaner");
             document.getElementById('aspiradora').style.backgroundColor = 'white';
         }
     },
-    /*comando voz sala*/
+    /*voice command parking*/
+    /*close and turn on*/
     {
-        indexes: ['cerrar puerta entrada parqueadero'],
+        indexes: ['close parking entrance door'],
         action: function () {
-            artyom.say("cerrando puerta entrada parqueadero");
-            document.getElementById('puerta-entrada-parqueadero').style.backgroundColor = 'green';
+            artyom.say("closing parking entrance door");
+            document.getElementById('parking-entrance').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['cerrar puerta entrada parqueadero sala'],
+        indexes: ['close parking entrance door sala'],
         action: function () {
-            artyom.say("cerrando puerta entrada parqueadero sala");
-            document.getElementById('puerta-entradasala-parqueadero').style.backgroundColor = 'green';
+            artyom.say("closing parking entrance door sala");
+            document.getElementById('room-entrance-parking-door').style.backgroundColor = 'green';
         }
     },
     {
-        indexes: ['encender luz parqueadero'],
+        indexes: ['turn on parking light'],
         action: function () {
-            artyom.say("encendiendo luz parqueadero");
-            document.getElementById('bombillo-parqueadero').style.backgroundColor = 'yellow';
+            artyom.say("turning onparking light");
+            document.getElementById('parking-light').style.backgroundColor = 'yellow';
         }
     },
+    /*open and to turn off*/
 
     {
-        indexes: ['abrir puerta entrada parqueadero'],
+        indexes: ['open parking entrance door'],
         action: function () {
-            artyom.say("abriendo puerta entrada parqueadero");
-            document.getElementById('puerta-entrada-parqueadero').style.backgroundColor = 'white';
+            artyom.say("opening parking entrance door");
+            document.getElementById('parking-entrance').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['abrir puerta entrada parqueadero sala'],
+        indexes: ['open room entrance parking door'],
         action: function () {
-            artyom.say("abriendo puerta entrada parqueadero sala");
-            document.getElementById('puerta-entradasala-parqueadero').style.backgroundColor = 'white';
+            artyom.say("opening room entrance parking door");
+            document.getElementById('room-entrance-parking-door').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar luz parqueadero'],
+        indexes: ['turn off parking light'],
         action: function () {
-            artyom.say("apagando luz parqueadero");
-            document.getElementById('bombillo-parqueadero').style.backgroundColor = 'white';
+            artyom.say("turning off parking light");
+            document.getElementById('parking-light').style.backgroundColor = 'white';
         }
     },
-    /*comando voz jardin*/
+    /*voice command Sprayer*/
+    /*close*/
     {
-        indexes: ['encender roseador 1'],
+        indexes: ["turn on sprayer one","turn on sprayer 1"],
         action: function () {
-            artyom.say("encendiendo roseador 1");
-            document.getElementById('roseador-1').style.backgroundColor = 'grey';
+            artyom.say("turning on sprayer one");
+            document.getElementById('Sprayer-1').style.backgroundColor = 'grey';
         }
     },
     {
-        indexes: ['encender roseador two'],
+        indexes: ["turn on sprayer 2","turn on sprayer two"],
         action: function () {
-            artyom.say("encendiendo roseador two");
-            document.getElementById('roseador-two').style.backgroundColor = 'grey';
+            artyom.say("turning on sprayer 2");
+            document.getElementById('Sprayer-2').style.backgroundColor = 'grey';
         }
     },
+     /*turn off*/
 
     {
-        indexes: ['apagar roseador 1'],
+        indexes: ["turn off sprayer one","turn off sprayer 1"],
         action: function () {
-            artyom.say("apagando roseador 1");
-            document.getElementById('roseador-1').style.backgroundColor = 'white';
+            artyom.say("turning off sprayer one");
+            document.getElementById('Sprayer-1').style.backgroundColor = 'white';
         }
     },
     {
-        indexes: ['apagar roseador two'],
+        indexes: ["turn off on sprayer 2","turn off sprayer two"],
         action: function () {
-            artyom.say("apagando roseador two");
-            document.getElementById('roseador-two').style.backgroundColor = 'white';
+            artyom.say("turning off sprayer 2");
+            document.getElementById('Sprayer-2').style.backgroundColor = 'white';
         }
     }
 
 ]);
 
 artyom.initialize({
-    lang: "es-ES",
+    lang: "en-GB",
     debug: true,
     listen: true,
     continuous: true,
@@ -563,7 +553,7 @@ artyom.initialize({
 
 artyom.redirectRecognizedTextOutput(function (recognized, isFinal) {
     if (isFinal) {
-        console.log("Texto final reconocido: " + recognized);
+        console.log("Recognized final text:" + recognized);
     } else {
         console.log(recognized);
     }
