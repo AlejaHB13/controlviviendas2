@@ -1,4 +1,5 @@
 var artyom = new Artyom();
+const gif = document.getElementById('gif');
 var isPatoVisible = false; // Variable para controlar la visibilidad del pato
 var intervalID; // Variable para almacenar el ID del intervalo
 var directionX = 'derecha'; // Variable de estado para controlar la dirección horizontal del movimiento
@@ -1108,8 +1109,17 @@ artyom.addCommands([
     {
         indexes: ['encender rociador uno', 'encender rociador 1'],
         action: function () {
-            artyom.say("encendiendo roseador uno");
+            artyom.say("encendiendo rociador uno");
             document.getElementById('roseador-2').style.backgroundColor = 'grey';
+
+            //funcion agua
+
+            document.getElementById('agua').classList.remove('hidden')
+            intervalID = setInterval(function () {
+                moverAgua();
+            }, 1000);
+
+
             //Funcion pato 
             const patoElement = document.getElementById('patocaminando');
             const mensajeElement = document.getElementById('mensajeagua');
@@ -1137,10 +1147,18 @@ artyom.addCommands([
         }
     },
     {
-        indexes: ['encender roseador dos'],
+        indexes: ['encender rociador dos', 'encender rociador 2'],
         action: function () {
-            artyom.say("encendiendo roseador dos");
+            artyom.say("encendiendo rociador dos");
             document.getElementById('roseador-1').style.backgroundColor = 'grey';
+
+            //funcion agua
+            document.getElementById('agua2').classList.remove('hidden')
+            intervalID = setInterval(function () {
+                moverAgua();
+            }, 1000);
+
+
             //Funcion pato 
             const patoElement = document.getElementById('patocaminando');
             const mensajeElement = document.getElementById('mensajeagua');
@@ -1172,17 +1190,23 @@ artyom.addCommands([
     /*apagar*/
 
     {
-        indexes: ['apagar roseador uno'],
+        indexes: ['apagar rociador uno', 'apagar rociador 1'],
         action: function () {
-            artyom.say("apagando roseador uno");
+            artyom.say("apagando rociador uno");
             document.getElementById('roseador-2').style.backgroundColor = 'white';
+
+            document.getElementById('agua').classList.add('hidden');
+            clearInterval(intervalID); // Detener el movimiento constante
         }
     },
     {
-        indexes: ['apagar roseador dos'],
+        indexes: ['apagar rociador dos', 'apagar rociador 2'],
         action: function () {
-            artyom.say("apagando roseador dos");
+            artyom.say("apagando rociador dos");
             document.getElementById('roseador-1').style.backgroundColor = 'white';
+
+            document.getElementById('agua2').classList.add('hidden');
+            clearInterval(intervalID); // Detener el movimiento constante
         }
     }
 
@@ -1217,7 +1241,6 @@ function moverAspiradora() {
         }
     }
 }
-
 
 artyom.initialize({
     lang: "es-ES",

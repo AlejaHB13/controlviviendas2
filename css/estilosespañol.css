@@ -608,3 +608,27 @@
         transform: translateX(0);
     }
 }
+
+#contenedor-agua {
+    top: 1465px;
+    left: 330px;
+}
+.roseador-agua {
+    position: absolute;
+    top: 1104px;
+    left: 791px;
+    transition: all 0.5s ease;
+}
+
+
+#contenedor-agua2{
+    top: 1330px;
+    left: 1488px;
+}
+
+.roseador-agua2 {
+    position: absolute;
+    top: 1104px;
+    left: 791px;
+    transition: all 0.5s ease;
+}

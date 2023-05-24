@@ -1009,6 +1009,13 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on sprayer one");
             document.getElementById('Sprayer-1').style.backgroundColor = 'grey';
+
+            //funcion agua
+
+            document.getElementById('agua').classList.remove('hidden')
+            intervalID = setInterval(function () {
+                moverAgua();
+            }, 1000);
         }
     },
     {
@@ -1016,6 +1023,12 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on sprayer 2");
             document.getElementById('Sprayer-2').style.backgroundColor = 'grey';
+
+            //funcion agua
+            document.getElementById('agua2').classList.remove('hidden')
+            intervalID = setInterval(function () {
+                moverAgua();
+            }, 1000);
         }
     },
     /*turn off*/
@@ -1036,6 +1049,7 @@ artyom.addCommands([
     }
 
 ]);
+
 function moverAspiradora() {
     var imagen = document.getElementById('aspiradora');
     var topActual = parseInt(imagen.style.top, 10) || 1104; // Utiliza el valor inicial si no hay ningún valor en el estilo en línea
