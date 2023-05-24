@@ -1,4 +1,8 @@
 var artyom = new Artyom();
+var isPatoVisible = false; // Variable para controlar la visibilidad del pato
+var intervalID; // Variable para almacenar el ID del intervalo
+var directionX = 'derecha'; // Variable de estado para controlar la dirección horizontal del movimiento
+var directionY = 'abajo'; // Variable de estado para controlar la dirección vertical del movimiento
 
 document.querySelector("#activar").addEventListener('click', function () {
     artyom.say("sound activated");
@@ -28,7 +32,7 @@ artyom.addCommands([
             mostrarAlerta();
         }
     },
-    
+
     /*voice command main room*/
     /* close and turn on */
     {
@@ -50,6 +54,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on main room light");
             document.getElementById('main-room-lightbulb').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -57,6 +81,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on main room heating");
             document.getElementById('main-room-heating').style.backgroundColor = 'red';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -64,6 +108,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on tv master bedroom");
             document.getElementById('"main-room-tv').style.backgroundColor = 'orange';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     /*open and to turn off*/
@@ -73,6 +137,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening main room window");
             document.getElementById('main-room-window').style.backgroundColor = 'white';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeventana');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -124,6 +208,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on light room 2");
             document.getElementById('light-room2').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -131,6 +235,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on heating room 2");
             document.getElementById('healting-room2').style.backgroundColor = 'red';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     {
@@ -138,6 +263,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on tv roomn 2");
             document.getElementById('tv-room2').style.backgroundColor = 'orange';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -147,6 +293,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening window room 2");
             document.getElementById('window-room2').style.backgroundColor = 'white';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeventana');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -199,6 +365,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on light room 3");
             document.getElementById('light-room3').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -206,6 +392,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on heating room 3");
             document.getElementById('healting-room3').style.backgroundColor = 'red';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -215,6 +422,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening window room 3");
             document.getElementById('window-room3').style.backgroundColor = 'white';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeventana');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -260,6 +487,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on main bathroom light");
             document.getElementById('main-bath-light').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -307,6 +555,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on luz bathroom light 2");
             document.getElementById('bath-light2').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     /*open and to turn off*/
@@ -315,6 +583,26 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening window bathroom 2s");
             document.getElementById('bath-window2').style.backgroundColor = 'blue';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeventana');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -345,6 +633,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on kitchen light");
             document.getElementById('kitchen-light').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -377,6 +686,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on cupboard light");
             document.getElementById('cup-board-light').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -416,6 +746,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on living room light");
             document.getElementById('room-light').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     {
@@ -423,13 +774,58 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning on living room heating");
             document.getElementById('room-heating').style.backgroundColor = 'red';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     {
         indexes: ['turn on vacuum cleaner'],
         action: function () {
             artyom.say("turning vacuum cleaner");
-            document.getElementById('aspiradora').style.backgroundColor = 'purple';
+            document.getElementById('aspiradora').classList.remove('hidden')
+            intervalID = setInterval(function () {
+                moverAspiradora();
+            }, 1000); // Intervalo de tiempo en milisegundos para el movimiento constante
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -446,6 +842,29 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening door entrance living room");
             document.getElementById('main-entrance').style.backgroundColor = 'white';
+            const mensajeElement = document.getElementById('mensajepuerta');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+
+                isPatoVisible = true;
+
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -466,7 +885,8 @@ artyom.addCommands([
         indexes: ['turn off vacuum cleaner'],
         action: function () {
             artyom.say("turning off vacuum cleaner");
-            document.getElementById('aspiradora').style.backgroundColor = 'white';
+            document.getElementById('aspiradora').classList.add('hidden');
+            clearInterval(intervalID); // Detener el movimiento constante
         }
     },
     /*voice command parking*/
@@ -490,6 +910,27 @@ artyom.addCommands([
         action: function () {
             artyom.say("turning onparking light");
             document.getElementById('parking-light').style.backgroundColor = 'yellow';
+            //Funcion pato 
+            const patoElement = document.getElementById('patocaminando');
+            const mensajeElement = document.getElementById('mensajeluz');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+                isPatoVisible = true;
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
+
         }
     },
     /*open and to turn off*/
@@ -499,6 +940,29 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening parking entrance door");
             document.getElementById('parking-entrance').style.backgroundColor = 'white';
+            const mensajeElement = document.getElementById('mensajepuerta');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+
+                isPatoVisible = true;
+
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -506,6 +970,29 @@ artyom.addCommands([
         action: function () {
             artyom.say("opening room entrance parking door");
             document.getElementById('room-entrance-parking-door').style.backgroundColor = 'white';
+            const mensajeElement = document.getElementById('mensajepuerta');
+            if (!isPatoVisible) {
+                patoElement.style.display = 'inline';
+
+                mensajeElement.style.opacity = 1;
+                mensajeElement.style.top = '-1580px';
+                mensajeElement.style.left = '-541px';
+                mensajeElement.style.transform = 'translateX(0)';
+
+                isPatoVisible = true;
+
+                patoElement.style.animation = 'caminar 5s linear infinite';
+
+
+
+                // Desaparecer el pato después de 10 segundos 
+                setTimeout(function () {
+                    patoElement.style.display = 'none';
+                    mensajeElement.style.opacity = 0;
+                    mensajeElement.textContent = '';
+                    isPatoVisible = false;
+                }, 10000);
+            }
         }
     },
     {
@@ -549,6 +1036,37 @@ artyom.addCommands([
     }
 
 ]);
+function moverAspiradora() {
+    var imagen = document.getElementById('aspiradora');
+    var topActual = parseInt(imagen.style.top, 10) || 1104; // Utiliza el valor inicial si no hay ningún valor en el estilo en línea
+    var leftActual = parseInt(imagen.style.left, 10) || 791; // Utiliza el valor inicial si no hay ningún valor en el estilo en línea
+    var paso = 20; // Ajusta el valor de desplazamiento (paso) según tus preferencias
+
+    if (directionX === 'derecha') {
+        imagen.style.left = (leftActual + paso) + 'px';
+        if (leftActual >= 1000) {
+            directionX = 'izquierda';
+        }
+    } else if (directionX === 'izquierda') {
+        imagen.style.left = (leftActual - paso) + 'px';
+        if (leftActual <= 791) {
+            directionX = 'derecha';
+        }
+    }
+
+    if (directionY === 'abajo') {
+        imagen.style.top = (topActual + paso) + 'px';
+        if (topActual >= 1104) {
+            directionY = 'arriba';
+        }
+    } else if (directionY === 'arriba') {
+        imagen.style.top = (topActual - paso) + 'px';
+        if (topActual <= 904) {
+            directionY = 'abajo';
+        }
+    }
+}
+
 
 artyom.initialize({
     lang: "en-GB",
