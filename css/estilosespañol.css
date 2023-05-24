@@ -508,14 +508,14 @@
     border: 2px solid black;
 }
 
-.aspiradora {
+/*.aspiradora {
     position: absolute;
     top: 1140px;
     left: 798px;
     width: 30px;
     height: 9px;
     border: 2px solid black;
-}
+}*/
 
 .cambiodecolor {
     background-color: red;
@@ -531,4 +531,80 @@
 
 .cambiodecolorbombillo {
     background-color: yellow;
+}
+#containeraspi {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+#aspiradora {
+    position: absolute;
+    top: 1104px;
+    left: 791px;
+    transition: all 0.5s ease;
+}
+#contenedor-pato {
+    position: relative;
+}
+
+#patocaminando {
+    position: absolute;
+    top: -1540px;
+    left: -541px;
+    display: none;
+}
+
+#mensajeluz {
+    position: absolute;
+    top: -1580px;
+    left: -541px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 2px solid blue;
+    padding: 10px;
+}
+#mensajeagua {
+    position: absolute;
+    top: -1580px;
+    left: -541px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 2px solid blue;
+    padding: 10px;
+}
+#mensajeventana {
+    position: absolute;
+    top: -1580px;
+    left: -541px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 2px solid blue;
+    padding: 10px;
+}
+#mensajepuerta {
+    position: absolute;
+    top: -1580px;
+    left: -541px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+@keyframes caminar {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100px);
+        /* Ajusta la distancia horizontal del movimiento del pato */
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }

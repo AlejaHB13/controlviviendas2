@@ -97,7 +97,7 @@ artyom.addCommands([
         }
     },
     {
-        indexes: ['turn off tv master bedroom'],
+        indexes: ['turn off tv main bedroom'],
         action: function () {
             artyom.say("turning off tv main room");
             document.getElementById('main-room-tv').style.backgroundColor = 'white';
