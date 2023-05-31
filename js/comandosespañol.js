@@ -1211,6 +1211,44 @@ artyom.addCommands([
     }
 
 ]);
+artyom.addCommands({
+    indexes: ['abrir nevera'],
+    action: function () {
+        artyom.say("abriendo nevera");
+        var mainContainer = document.getElementById('main-container');
+        mainContainer.classList.remove('hidden');
+        var foodList = document.getElementById('food-list');
+        var overlay = document.getElementById('overlay');
+        foodList.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        // Aquí puedes agregar lógica para mostrar los alimentos almacenados en la nevera
+    }
+});
+
+// Comando de voz para cerrar la hoja principal
+artyom.addCommands({
+    indexes: ['cerrar nevera'],
+    action: function () {
+        artyom.say("cerrando nevera");
+        var mainContainer = document.getElementById('main-container');
+        mainContainer.classList.add('hidden');
+    }
+});
+
+// Comando de voz para abrir una nueva hoja y añadir alimentos
+artyom.addCommands({
+    indexes: ['añadir alimento *', 'añadir alimentos *'],
+    smart: true,
+    action: function (i, wildcard) {
+        var foodItems = document.getElementById('food-items');
+        var foodItem = document.createElement('li');
+        var foodName = wildcard.trim();
+        var foodQuantity = prompt('Ingrese la cantidad del alimento ' + foodName + ':');
+        foodItem.innerHTML = '<span>' + foodName + ':</span> ' + foodQuantity + ' unidades';
+        foodItems.appendChild(foodItem);
+         artyom.say("Alimento añadido correctamente");
+    }
+});
 function moverAspiradora() {
     var imagen = document.getElementById('aspiradora');
     var topActual = parseInt(imagen.style.top, 10) || 1104; // Utiliza el valor inicial si no hay ningún valor en el estilo en línea

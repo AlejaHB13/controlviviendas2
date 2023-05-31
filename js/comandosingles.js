@@ -1049,6 +1049,44 @@ artyom.addCommands([
     }
 
 ]);
+artyom.addCommands({
+    indexes: ['open fridge'],
+    action: function () {
+        artyom.say("opening fridge");
+        var mainContainer = document.getElementById('main-container');
+        mainContainer.classList.remove('hidden');
+        var foodList = document.getElementById('food-list');
+        var overlay = document.getElementById('overlay');
+        foodList.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        // Aquí puedes agregar lógica para mostrar los alimentos almacenados en la nevera
+    }
+});
+
+// Comando de voz para cerrar la hoja principal
+artyom.addCommands({
+    indexes: ['close fridge'],
+    action: function () {
+        artyom.say("closing fridge");
+        var mainContainer = document.getElementById('main-container');
+        mainContainer.classList.add('hidden');
+    }
+});
+
+// Comando de voz para abrir una nueva hoja y añadir alimentos
+artyom.addCommands({
+    indexes: ['add food *'],
+    smart: true,
+    action: function (i, wildcard) {
+        var foodItems = document.getElementById('food-items');
+        var foodItem = document.createElement('li');
+        var foodName = wildcard.trim();
+        var foodQuantity = prompt('Enter the amount of food ' + foodName + ':');
+        foodItem.innerHTML = '<span>' + foodName + ':</span> ' + foodQuantity + ' units';
+        foodItems.appendChild(foodItem);
+        artyom.say("Food added correctly");
+    }
+});
 
 function moverAspiradora() {
     var imagen = document.getElementById('aspiradora');
